@@ -1,0 +1,23 @@
+services:
+  mysql:
+    image: mysql
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${DB_DATABASE}
+      - MYSQL_USER=${DB_USERNAME}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+    ports:
+      - "${DB_PORT}:3306"
+    container_name: mysql_taller
+  phpmyadmin:
+    image: phpmyadmin
+    environment:
+      - PMA_HOST=mysql
+      - PMA_ARBITRARY=1
+    ports:
+      - "8100:80"
+    depends_on:
+      - mysql
+    container_name: phpmyadmin_taller
