@@ -1,3 +1,4 @@
+import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
 
 interface DarkModeToggleProps {
@@ -12,11 +13,13 @@ export default function DarkModeToggle({
     useEffect(() => {
         // Check if user has a preference stored
         const isDarkMode = localStorage.getItem('darkMode') === 'true';
-        
+
         // Check for system preference if no stored preference
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const prefersDark = window.matchMedia(
+            '(prefers-color-scheme: dark)',
+        ).matches;
         const shouldBeDark = isDarkMode !== null ? isDarkMode : prefersDark;
-        
+
         setDarkMode(shouldBeDark);
 
         // Apply the theme on initial load
@@ -42,6 +45,11 @@ export default function DarkModeToggle({
         }
     };
 
+    const moon_path =
+        'M43.9905 58.2116C52.9439 57.1122 59.3109 48.9629 58.2116 40.0095C41.4472 48.763 34.1312 41.3619 40.0095 25.7884C31.0561 26.8878 24.6891 35.0371 25.7884 43.9905C26.8878 52.9439 35.0371 59.3109 43.9905 58.2116Z';
+    const sun_path =
+        'M11 15C13.2091 15 15 13.2091 15 11C15 8.79086 13.2091 7 11 7C8.79086 7 7 8.79086 7 11C7 13.2091 8.79086 15 11 15Z';
+
     return (
         <button
             onClick={toggleDarkMode}
@@ -50,39 +58,54 @@ export default function DarkModeToggle({
                 darkMode ? 'Switch to light mode' : 'Switch to dark mode'
             }
         >
-            {darkMode ? (
-                // Sun icon for light mode
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                    />
-                </svg>
-            ) : (
-                // Moon icon for dark mode
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                    />
-                </svg>
-            )}
+            <motion.svg
+                width="98"
+                height="98"
+                viewBox="0 0 98 98"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="content-center"
+            >
+                <motion.path
+                    initial={{ fillOpacity: 0, strokeOpacity: 0 }}
+                    animate={
+                        darkMode
+                            ? {
+                                  fillOpacity: 0.35,
+                                  strokeOpacity: 1,
+                                  rotate: 360,
+                                  scale: 2,
+                                  stroke: 'var(--color-blue-400)',
+                                  fill: 'var(--color-blue-400)',
+                                  d: moon_path,
+                              }
+                            : {
+                                  fillOpacity: 0.35,
+                                  strokeOpacity: 1,
+                                  rotate: 0,
+                                  stroke: 'var(--color-yellow-600)',
+                                  fill: 'var(--color-yellow-600)',
+                                  d: sun_path,
+                              }
+                    }
+                    transition={{ duration: 0.5 }}
+                    d={darkMode ? moon_path : sun_path}
+                    stroke="black"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                />
+                <motion.g className="stroke-6 stroke-yellow-600">
+                    <path d="M11 1V3" />
+                    <path d="M11 19V21" />
+                    <path d="M3.93 3.93L5.34 5.34" />
+                    <path d="M16.66 16.66L18.07 18.07" />
+                    <path d="M1 11H3" />
+                    <path d="M19 11H21" />
+                    <path d="M5.34 16.66L3.93 18.07" />
+                    <path d="M18.07 3.93L16.66 5.34" />
+                </motion.g>
+            </motion.svg>
         </button>
     );
 }
