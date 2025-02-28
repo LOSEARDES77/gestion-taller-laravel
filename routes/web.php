@@ -6,14 +6,11 @@ use App\Http\Controllers\VehiculoController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified']);
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/dashboard', function () {
+    Route::get('/', function () {
         return Inertia::render('Dashboard');
-    })->name('dashboard');
+    })->name('index');
 
     // Cliente routes
     Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes.index');

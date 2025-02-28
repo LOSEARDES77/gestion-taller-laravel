@@ -35,10 +35,10 @@ export default function Authenticated({
 
                             <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <NavLink
-                                    href={route('dashboard')}
-                                    active={route().current('dashboard')}
+                                    href={route('index')}
+                                    active={route().current('index')}
                                 >
-                                    Dashboard
+                                    Inicio
                                 </NavLink>
                                 <NavLink
                                     href={route('clientes.index')}
@@ -57,7 +57,7 @@ export default function Authenticated({
 
                         <div className="hidden sm:ml-6 sm:flex sm:items-center">
                             <DarkModeToggle className="mr-3" />
-                            
+
                             <div className="relative ml-3">
                                 <Dropdown>
                                     <Dropdown.Trigger>
@@ -104,7 +104,7 @@ export default function Authenticated({
 
                         <div className="-mr-2 flex items-center sm:hidden">
                             <DarkModeToggle className="mr-2" />
-                            
+
                             <button
                                 onClick={() =>
                                     setShowingNavigationDropdown(
@@ -155,7 +155,7 @@ export default function Authenticated({
                 >
                     <div className="space-y-1 pb-3 pt-2">
                         <ResponsiveNavLink
-                            href={route('dashboard')}
+                            href={route('index')}
                             active={route().current('dashboard')}
                         >
                             Dashboard

@@ -31,26 +31,13 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
         if (editingId) {
             put(route('api.clientes.update', editingId), {
                 onSuccess: () => {
-                    setEditingId(null);
-                    setData({
-                        nombre: '',
-                        email: '',
-                        telefono: '',
-                        dni: '',
-                    });
-                    setShowForm(false);
+                    closeForm();
                 },
             });
         } else {
             post(route('api.clientes.store'), {
                 onSuccess: () => {
-                    setData({
-                        nombre: '',
-                        email: '',
-                        telefono: '',
-                        dni: '',
-                    });
-                    setShowForm(false);
+                    closeForm();
                 },
             });
         }
@@ -71,6 +58,17 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
             dni: cliente.dni,
         });
         setEditingId(cliente.id);
+    };
+
+    const closeForm = () => {
+        setShowForm(false);
+        setEditingId(null);
+        setData({
+            nombre: '',
+            email: '',
+            telefono: '',
+            dni: '',
+        });
     };
 
     return (
@@ -151,7 +149,7 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                         {editingId ? 'Actualizar' : 'Crear'} Cliente
                     </button>
                     <button
-                        onClick={() => setShowForm(false)}
+                        onClick={() => closeForm()}
                         className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 disabled:opacity-50 dark:bg-blue-600 dark:hover:bg-blue-700"
                     >
                         Cancelar

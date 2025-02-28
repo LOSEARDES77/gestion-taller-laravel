@@ -38,32 +38,13 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
         if (editingId) {
             put(route('api.vehiculos.update', editingId), {
                 onSuccess: () => {
-                    setShowForm(false);
-                    setEditingId(null);
-                    setData({
-                        marca: '',
-                        modelo: '',
-                        color: '',
-                        placa: '',
-                        año: '',
-                        kilometraje: '',
-                        cliente_id: '',
-                    });
+                    closeForm();
                 },
             });
         } else {
             post(route('api.vehiculos.store'), {
                 onSuccess: () => {
-                    setShowForm(false);
-                    setData({
-                        marca: '',
-                        modelo: '',
-                        color: '',
-                        placa: '',
-                        año: '',
-                        kilometraje: '',
-                        cliente_id: '',
-                    });
+                    closeForm();
                 },
             });
         }
@@ -88,6 +69,21 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
         });
         setEditingId(vehiculo.id);
     };
+
+    const closeForm = () => {
+        setShowForm(false);
+        setEditingId(null);
+        setData({
+            marca: '',
+            modelo: '',
+            color: '',
+            placa: '',
+            año: '',
+            kilometraje: '',
+            cliente_id: '',
+        });
+    };
+
 
     return (
         <div className="container mx-auto p-4">
@@ -219,7 +215,7 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                         {editingId ? 'Actualizar' : 'Crear'} Vehículo
                     </button>
                     <button
-                        onClick={() => setShowForm(false)}
+                        onClick={() => closeForm()}
                         className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 disabled:opacity-50 dark:bg-blue-600 dark:hover:bg-blue-700"
                     >
                         Cancelar
