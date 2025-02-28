@@ -1,6 +1,7 @@
 import { Cliente } from '@/types';
 import { router, useForm } from '@inertiajs/react';
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 
 interface ClienteListProps {
     clientes: Cliente[];
@@ -32,21 +33,99 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
             put(route('api.clientes.update', editingId), {
                 onSuccess: () => {
                     closeForm();
+                    Swal.fire({
+                        title: "Success",
+                        text: "Cliente actualizado correctamente",
+                        icon: "success",
+                        toast: true,
+                        position: "bottom-end",
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                    });
+                },
+                onError: () => {
+                    Swal.fire({
+                        title: "Error",
+                        text: "Hubo un problema al actualizar el cliente",
+                        icon: "error",
+                        toast: true,
+                        position: "bottom-end",
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                    });
                 },
             });
         } else {
             post(route('api.clientes.store'), {
                 onSuccess: () => {
                     closeForm();
+                    Swal.fire({
+                        title: "Success",
+                        text: "Cliente creado correctamente",
+                        icon: "success",
+                        toast: true,
+                        position: "bottom-end",
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                    });
+                },
+                onError: () => {
+                    Swal.fire({
+                        title: "Error",
+                        text: "Hubo un problema al crear el cliente",
+                        icon: "error",
+                        toast: true,
+                        position: "bottom-end",
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                    });
                 },
             });
         }
     };
 
     const handleDelete = (id: number) => {
-        if (window.confirm('¿Está seguro de eliminar este cliente?')) {
-            router.delete(route('api.clientes.destroy', id));
-        }
+        Swal.fire({
+            title: "¿Está seguro?",
+            text: "¿Desea eliminar este cliente?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Sí, eliminar",
+            cancelButtonText: "Cancelar",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                router.delete(route('api.clientes.destroy', id), {
+                    onSuccess: () => {
+                        Swal.fire({
+                            title: "Success",
+                            text: "Cliente eliminado correctamente",
+                            icon: "success",
+                            toast: true,
+                            position: "bottom-end",
+                            showConfirmButton: false,
+                            timer: 3000,
+                            timerProgressBar: true,
+                        });
+                    },
+                    onError: () => {
+                        Swal.fire({
+                            title: "Error",
+                            text: "Hubo un problema al eliminar el cliente",
+                            icon: "error",
+                            toast: true,
+                            position: "bottom-end",
+                            showConfirmButton: false,
+                            timer: 3000,
+                            timerProgressBar: true,
+                        });
+                    },
+                });
+            }
+        });
     };
 
     const handleEdit = (cliente: Cliente) => {
@@ -158,7 +237,7 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
             ) : (
                 <button
                     onClick={() => setShowForm(true)}
-                    className="mb-8 space-y-4 rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700"
+                    className="mb-8 space-y-4 rounded bg-blue-500 px-4 py-2 text-white hover:bg-gray-100 dark:bg-gray-900 dark:hover:bg-blue-700"
                 >
                     Crear Cliente
                 </button>

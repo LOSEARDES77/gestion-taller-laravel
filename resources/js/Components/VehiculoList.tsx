@@ -1,6 +1,7 @@
 import { Cliente, Vehiculo } from '@/types';
 import { router, useForm } from '@inertiajs/react';
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 
 interface VehiculoListProps {
     vehiculos: Vehiculo[];
@@ -39,21 +40,99 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
             put(route('api.vehiculos.update', editingId), {
                 onSuccess: () => {
                     closeForm();
+                    Swal.fire({
+                        title: "Success",
+                        text: "Vehículo actualizado correctamente",
+                        icon: "success",
+                        toast: true,
+                        position: "bottom-end",
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                    });
+                },
+                onError: () => {
+                    Swal.fire({
+                        title: "Error",
+                        text: "Hubo un problema al actualizar el vehículo",
+                        icon: "error",
+                        toast: true,
+                        position: "bottom-end",
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                    });
                 },
             });
         } else {
             post(route('api.vehiculos.store'), {
                 onSuccess: () => {
                     closeForm();
+                    Swal.fire({
+                        title: "Success",
+                        text: "Nuevo vehículo creado correctamente",
+                        icon: "success",
+                        toast: true,
+                        position: "bottom-end",
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                    });
+                },
+                onError: () => {
+                    Swal.fire({
+                        title: "Error",
+                        text: "Hubo un problema al crear el vehículo",
+                        icon: "error",
+                        toast: true,
+                        position: "bottom-end",
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                    });
                 },
             });
         }
     };
 
     const handleDelete = (id: number) => {
-        if (window.confirm('¿Está seguro de eliminar este vehículo?')) {
-            router.delete(route('api.vehiculos.destroy', id));
-        }
+        Swal.fire({
+            title: "¿Está seguro?",
+            text: "¿Desea eliminar este vehículo?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Sí, eliminar",
+            cancelButtonText: "Cancelar",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                router.delete(route('api.vehiculos.destroy', id), {
+                    onSuccess: () => {
+                        Swal.fire({
+                            title: "Success",
+                            text: "Vehículo eliminado correctamente",
+                            icon: "success",
+                            toast: true,
+                            position: "bottom-end",
+                            showConfirmButton: false,
+                            timer: 3000,
+                            timerProgressBar: true,
+                        });
+                    },
+                    onError: () => {
+                        Swal.fire({
+                            title: "Error",
+                            text: "Hubo un problema al eliminar el vehículo",
+                            icon: "error",
+                            toast: true,
+                            position: "bottom-end",
+                            showConfirmButton: false,
+                            timer: 3000,
+                            timerProgressBar: true,
+                        });
+                    },
+                });
+            }
+        });
     };
 
     const handleEdit = (vehiculo: Vehiculo) => {
