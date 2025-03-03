@@ -1,10 +1,10 @@
-import VehiculoList from '@/Components/VehiculoList';
+import VehiculoList from '@/Components/db-views/VehiculoList';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Cliente, PageProps, Vehiculo } from '@/types';
 import { Head } from '@inertiajs/react';
 import React from 'react';
 
-interface Props extends Record<string, any> {
+interface Props extends Record<string, unknown> {
     vehiculos: Vehiculo[];
     clientes: Cliente[];
 }
@@ -22,7 +22,7 @@ const Index: React.FC<PageProps<Props>> = ({ auth, vehiculos, clientes }) => {
             <Head title="Vehículos" />
             <div className="py-12">
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg dark:bg-gray-800 dark:border dark:border-gray-700">
+                    <div className="overflow-hidden bg-white shadow-sm dark:border dark:border-gray-700 dark:bg-gray-800 sm:rounded-lg">
                         <div className="p-6 text-gray-900 dark:text-gray-100">
                             <VehiculoList
                                 vehiculos={vehiculos}

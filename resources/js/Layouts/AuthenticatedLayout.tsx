@@ -1,8 +1,8 @@
-import ApplicationLogo from '@/Components/ApplicationLogo';
-import Dropdown from '@/Components/Dropdown';
-import NavLink from '@/Components/NavLink';
-import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
-import DarkModeToggle from '@/Components/DarkModeToggle';
+import ApplicationLogo from '@/Components/common/ApplicationLogo';
+import DarkModeToggle from '@/Components/common/DarkModeToggle';
+import Dropdown from '@/Components/common/Dropdown';
+import NavLink from '@/Components/common/NavLink';
+import ResponsiveNavLink from '@/Components/common/ResponsiveNavLink';
 import { User } from '@/types';
 import { Link } from '@inertiajs/react';
 import { ReactNode, useState } from 'react';
@@ -108,7 +108,7 @@ export default function Authenticated({
                             <button
                                 onClick={() =>
                                     setShowingNavigationDropdown(
-                                        (previousState) => !previousState
+                                        (previousState) => !previousState,
                                     )
                                 }
                                 className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 transition duration-150 ease-in-out hover:bg-gray-100 hover:text-gray-500 focus:bg-gray-100 focus:text-gray-500 focus:outline-none dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-100 dark:focus:bg-gray-700 dark:focus:text-gray-100"

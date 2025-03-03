@@ -1,4 +1,4 @@
-import { Cliente, Vehiculo } from '@/types';
+import { Cliente, Vehiculo } from '@/types/index';
 import { router, useForm } from '@inertiajs/react';
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
@@ -15,7 +15,7 @@ interface VehiculoForm extends Record<string, FormDataValue> {
     modelo: string;
     color: string;
     placa: string;
-    año: string;
+    anio: string;
     kilometraje: string;
     cliente_id: string;
 }
@@ -29,7 +29,7 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
             modelo: '',
             color: '',
             placa: '',
-            año: '',
+            anio: '',
             kilometraje: '',
             cliente_id: '',
         });
@@ -41,11 +41,11 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                 onSuccess: () => {
                     closeForm();
                     Swal.fire({
-                        title: "Success",
-                        text: "Vehículo actualizado correctamente",
-                        icon: "success",
+                        title: 'Success',
+                        text: 'Vehículo actualizado correctamente',
+                        icon: 'success',
                         toast: true,
-                        position: "bottom-end",
+                        position: 'bottom-end',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
@@ -53,11 +53,11 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                 },
                 onError: () => {
                     Swal.fire({
-                        title: "Error",
-                        text: "Hubo un problema al actualizar el vehículo",
-                        icon: "error",
+                        title: 'Error',
+                        text: 'Hubo un problema al actualizar el vehículo',
+                        icon: 'error',
                         toast: true,
-                        position: "bottom-end",
+                        position: 'bottom-end',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
@@ -69,11 +69,11 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                 onSuccess: () => {
                     closeForm();
                     Swal.fire({
-                        title: "Success",
-                        text: "Nuevo vehículo creado correctamente",
-                        icon: "success",
+                        title: 'Success',
+                        text: 'Nuevo vehículo creado correctamente',
+                        icon: 'success',
                         toast: true,
-                        position: "bottom-end",
+                        position: 'bottom-end',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
@@ -81,11 +81,11 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                 },
                 onError: () => {
                     Swal.fire({
-                        title: "Error",
-                        text: "Hubo un problema al crear el vehículo",
-                        icon: "error",
+                        title: 'Error',
+                        text: 'Hubo un problema al crear el vehículo',
+                        icon: 'error',
                         toast: true,
-                        position: "bottom-end",
+                        position: 'bottom-end',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
@@ -97,22 +97,22 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
 
     const handleDelete = (id: number) => {
         Swal.fire({
-            title: "¿Está seguro?",
-            text: "¿Desea eliminar este vehículo?",
-            icon: "warning",
+            title: '¿Está seguro?',
+            text: '¿Desea eliminar este vehículo?',
+            icon: 'warning',
             showCancelButton: true,
-            confirmButtonText: "Sí, eliminar",
-            cancelButtonText: "Cancelar",
+            confirmButtonText: 'Sí, eliminar',
+            cancelButtonText: 'Cancelar',
         }).then((result) => {
             if (result.isConfirmed) {
                 router.delete(route('api.vehiculos.destroy', id), {
                     onSuccess: () => {
                         Swal.fire({
-                            title: "Success",
-                            text: "Vehículo eliminado correctamente",
-                            icon: "success",
+                            title: 'Success',
+                            text: 'Vehículo eliminado correctamente',
+                            icon: 'success',
                             toast: true,
-                            position: "bottom-end",
+                            position: 'bottom-end',
                             showConfirmButton: false,
                             timer: 3000,
                             timerProgressBar: true,
@@ -120,11 +120,11 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                     },
                     onError: () => {
                         Swal.fire({
-                            title: "Error",
-                            text: "Hubo un problema al eliminar el vehículo",
-                            icon: "error",
+                            title: 'Error',
+                            text: 'Hubo un problema al eliminar el vehículo',
+                            icon: 'error',
                             toast: true,
-                            position: "bottom-end",
+                            position: 'bottom-end',
                             showConfirmButton: false,
                             timer: 3000,
                             timerProgressBar: true,
@@ -142,7 +142,7 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
             modelo: vehiculo.modelo,
             color: vehiculo.color,
             placa: vehiculo.placa,
-            año: vehiculo.año.toString(),
+            anio: vehiculo.anio.toString(),
             kilometraje: vehiculo.kilometraje.toString(),
             cliente_id: vehiculo.cliente_id.toString(),
         });
@@ -157,12 +157,11 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
             modelo: '',
             color: '',
             placa: '',
-            año: '',
+            anio: '',
             kilometraje: '',
             cliente_id: '',
         });
     };
-
 
     return (
         <div className="container mx-auto p-4">
@@ -236,7 +235,7 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                         <input
                             type="number"
                             placeholder="Año"
-                            value={data.año}
+                            value={data.anio}
                             onChange={(e) => setData('año', e.target.value)}
                             className="rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
                             required
@@ -358,7 +357,7 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                                     {vehiculo.placa}
                                 </td>
                                 <td className="border px-4 py-2 dark:border-gray-700 dark:text-gray-300">
-                                    {vehiculo.año}
+                                    {vehiculo.anio}
                                 </td>
                                 <td className="border px-4 py-2 dark:border-gray-700 dark:text-gray-300">
                                     {vehiculo.kilometraje}

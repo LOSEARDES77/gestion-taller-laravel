@@ -1,4 +1,4 @@
-import { Cliente } from '@/types';
+import { Cliente } from '@/types/index';
 import { router, useForm } from '@inertiajs/react';
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
@@ -34,11 +34,11 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                 onSuccess: () => {
                     closeForm();
                     Swal.fire({
-                        title: "Success",
-                        text: "Cliente actualizado correctamente",
-                        icon: "success",
+                        title: 'Success',
+                        text: 'Cliente actualizado correctamente',
+                        icon: 'success',
                         toast: true,
-                        position: "bottom-end",
+                        position: 'bottom-end',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
@@ -46,11 +46,11 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                 },
                 onError: () => {
                     Swal.fire({
-                        title: "Error",
-                        text: "Hubo un problema al actualizar el cliente",
-                        icon: "error",
+                        title: 'Error',
+                        text: 'Hubo un problema al actualizar el cliente',
+                        icon: 'error',
                         toast: true,
-                        position: "bottom-end",
+                        position: 'bottom-end',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
@@ -62,11 +62,11 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                 onSuccess: () => {
                     closeForm();
                     Swal.fire({
-                        title: "Success",
-                        text: "Cliente creado correctamente",
-                        icon: "success",
+                        title: 'Success',
+                        text: 'Cliente creado correctamente',
+                        icon: 'success',
                         toast: true,
-                        position: "bottom-end",
+                        position: 'bottom-end',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
@@ -74,11 +74,11 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                 },
                 onError: () => {
                     Swal.fire({
-                        title: "Error",
-                        text: "Hubo un problema al crear el cliente",
-                        icon: "error",
+                        title: 'Error',
+                        text: 'Hubo un problema al crear el cliente',
+                        icon: 'error',
                         toast: true,
-                        position: "bottom-end",
+                        position: 'bottom-end',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
@@ -90,22 +90,22 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
 
     const handleDelete = (id: number) => {
         Swal.fire({
-            title: "¿Está seguro?",
-            text: "¿Desea eliminar este cliente?",
-            icon: "warning",
+            title: '¿Está seguro?',
+            text: '¿Desea eliminar este cliente?',
+            icon: 'warning',
             showCancelButton: true,
-            confirmButtonText: "Sí, eliminar",
-            cancelButtonText: "Cancelar",
+            confirmButtonText: 'Sí, eliminar',
+            cancelButtonText: 'Cancelar',
         }).then((result) => {
             if (result.isConfirmed) {
                 router.delete(route('api.clientes.destroy', id), {
                     onSuccess: () => {
                         Swal.fire({
-                            title: "Success",
-                            text: "Cliente eliminado correctamente",
-                            icon: "success",
+                            title: 'Success',
+                            text: 'Cliente eliminado correctamente',
+                            icon: 'success',
                             toast: true,
-                            position: "bottom-end",
+                            position: 'bottom-end',
                             showConfirmButton: false,
                             timer: 3000,
                             timerProgressBar: true,
@@ -113,11 +113,11 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                     },
                     onError: () => {
                         Swal.fire({
-                            title: "Error",
-                            text: "Hubo un problema al eliminar el cliente",
-                            icon: "error",
+                            title: 'Error',
+                            text: 'Hubo un problema al eliminar el cliente',
+                            icon: 'error',
                             toast: true,
-                            position: "bottom-end",
+                            position: 'bottom-end',
                             showConfirmButton: false,
                             timer: 3000,
                             timerProgressBar: true,

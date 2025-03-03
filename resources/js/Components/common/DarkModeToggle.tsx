@@ -12,11 +12,13 @@ export default function DarkModeToggle({
     useEffect(() => {
         // Check if user has a preference stored
         const isDarkMode = localStorage.getItem('darkMode') === 'true';
-        
+
         // Check for system preference if no stored preference
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const prefersDark = window.matchMedia(
+            '(prefers-color-scheme: dark)',
+        ).matches;
         const shouldBeDark = isDarkMode !== null ? isDarkMode : prefersDark;
-        
+
         setDarkMode(shouldBeDark);
 
         // Apply the theme on initial load

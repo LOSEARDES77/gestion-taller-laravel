@@ -29,7 +29,7 @@ export interface Vehiculo {
     modelo: string;
     color: string;
     placa: string;
-    año: number;
+    anio: number;
     kilometraje: number;
     cliente_id: number;
     cliente?: Cliente;
