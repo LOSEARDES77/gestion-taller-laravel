@@ -236,13 +236,13 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                             type="number"
                             placeholder="Año"
                             value={data.anio}
-                            onChange={(e) => setData('año', e.target.value)}
+                            onChange={(e) => setData('anio', e.target.value)}
                             className="rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
                             required
                         />
-                        {errors.año && (
+                        {errors.anio && (
                             <div className="text-red-500 dark:text-red-400">
-                                {errors.año}
+                                {errors.anio}
                             </div>
                         )}
                     </div>
@@ -325,7 +325,7 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                                 Placa
                             </th>
                             <th className="px-4 py-2 dark:text-gray-200">
-                                Año
+                                anio
                             </th>
                             <th className="px-4 py-2 dark:text-gray-200">
                                 Kilometraje

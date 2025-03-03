@@ -30,7 +30,7 @@ class VehiculoController extends Controller
             'modelo' => 'required|string',
             'color' => 'required|string',
             'placa' => 'required|string|unique:vehiculos',
-            'año' => 'required|integer',
+            'anio' => 'required|integer',
             'kilometraje' => 'required|integer',
             'cliente_id' => 'required|exists:clientes,id'
         ]);
@@ -56,7 +56,7 @@ class VehiculoController extends Controller
             'modelo' => 'required|string',
             'color' => 'required|string',
             'placa' => 'required|string|unique:vehiculos,placa,' . $vehiculo->id,
-            'año' => 'required|integer',
+            'anio' => 'required|integer',
             'kilometraje' => 'required|integer',
             'cliente_id' => 'required|exists:clientes,id'
         ]);

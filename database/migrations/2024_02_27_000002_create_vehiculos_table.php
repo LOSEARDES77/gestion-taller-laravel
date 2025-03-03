@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('modelo');
             $table->string('color');
             $table->string('placa')->unique();
-            $table->integer('año');
+            $table->integer('anio');
             $table->integer('kilometraje');
             $table->foreignId('cliente_id')->constrained()->onDelete('cascade');
             $table->timestamps();

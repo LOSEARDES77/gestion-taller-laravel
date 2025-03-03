@@ -15,7 +15,7 @@ class Vehiculo extends Model
         'color',
         'placa',
         'cliente_id',
-        'año',
+        'anio',
         'kilometraje'
     ];
 

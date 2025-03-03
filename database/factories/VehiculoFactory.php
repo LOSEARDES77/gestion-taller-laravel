@@ -73,7 +73,7 @@ class VehiculoFactory extends Factory
             'modelo' => $modelo,
             'color' => $this->faker->safeColorName(),
             'placa' => self::generate_plate(),
-            'año' => $this->faker->numberBetween(2000, 2024),
+            'anio' => $this->faker->numberBetween(2000, 2024),
             'kilometraje' => $this->faker->numberBetween(0, 200000),
             'cliente_id' => Cliente::factory(),
         ];
