@@ -4,6 +4,7 @@ import './bootstrap';
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createRoot } from 'react-dom/client';
+import { TranslationProvider } from './Providers/TranslationProvider';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
@@ -26,9 +27,10 @@ const initDarkMode = () => {
     }
 };
 
-// Run the initialization
+// Run dark mode initialization
 initDarkMode();
 
+// Start the Inertia app
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
     resolve: (name) =>
@@ -39,7 +41,25 @@ createInertiaApp({
     setup({ el, App, props }) {
         const root = createRoot(el);
 
-        root.render(<App {...props} />);
+        // Add some CSS for animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .animate-fade-in {
+                animation: fadeIn 0.3s ease-out forwards;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Wrap the app with TranslationProvider
+        root.render(
+            <TranslationProvider>
+                <App {...props} />
+            </TranslationProvider>,
+        );
     },
     progress: {
         color: '#4B5563',

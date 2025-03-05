@@ -1,0 +1,114 @@
+{
+    "welcome": {
+        "es": "Bienvenido",
+        "en": "Welcome"
+    },
+    "home": {
+        "es": "Inicio",
+        "en": "Home"
+    },
+    "clients": {
+        "es": "Clientes",
+        "en": "Clients"
+    },
+    "vehicles": {
+        "es": "Vehículos",
+        "en": "Vehicles"
+    },
+    "add": {
+        "es": "Añadir",
+        "en": "Add"
+    },
+    "edit": {
+        "es": "Editar",
+        "en": "Edit"
+    },
+    "delete": {
+        "es": "Eliminar",
+        "en": "Delete"
+    },
+    "save": {
+        "es": "Guardar",
+        "en": "Save"
+    },
+    "cancel": {
+        "es": "Cancelar",
+        "en": "Cancel"
+    },
+    "name": {
+        "es": "Nombre",
+        "en": "Name"
+    },
+    "email": {
+        "es": "Correo electrónico",
+        "en": "Email"
+    },
+    "phone": {
+        "es": "Teléfono",
+        "en": "Phone"
+    },
+    "address": {
+        "es": "Dirección",
+        "en": "Address"
+    },
+    "switch_language": {
+        "es": "Cambiar idioma",
+        "en": "Switch language"
+    },
+    "profile": {
+        "es": "Perfil",
+        "en": "Profile"
+    },
+    "logout": {
+        "es": "Cerrar sesión",
+        "en": "Log out"
+    },
+    "loading": {
+        "es": "Cargando...",
+        "en": "Loading..."
+    },
+    "loading_translations": {
+        "es": "Cargando traducciones...",
+        "en": "Loading translations..."
+    },
+    "language_changed": {
+        "es": "Idioma cambiado a Español",
+        "en": "Language changed to English"
+    },
+    "error_loading_translations": {
+        "es": "Error al cargar las traducciones",
+        "en": "Error loading translations"
+    },
+    "search": {
+        "es": "Buscar",
+        "en": "Search"
+    },
+    "filter": {
+        "es": "Filtrar",
+        "en": "Filter"
+    },
+    "details": {
+        "es": "Detalles",
+        "en": "Details"
+    },
+    "actions": {
+        "es": "Acciones",
+        "en": "Actions"
+    },
+    "confirm": {
+        "es": "Confirmar",
+        "en": "Confirm"
+    },
+    "back": {
+        "es": "Volver",
+        "en": "Back"
+    },
+    "next": {
+        "es": "Siguiente",
+        "en": "Next"
+    },
+    "previous": {
+        "es": "Anterior",
+        "en": "Previous"
+    }
+}
