@@ -1,3 +1,4 @@
+import { __, useTranslation } from '@/Providers/TranslationProvider';
 import { Cliente } from '@/types/index';
 import { router, useForm } from '@inertiajs/react';
 import React, { useState } from 'react';
@@ -17,6 +18,7 @@ interface ClienteForm extends Record<string, FormDataValue> {
 }
 
 const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
+    useTranslation();
     const [editingId, setEditingId] = useState<number | null>(null);
     const [showForm, setShowForm] = useState(false);
     const { data, setData, post, put, processing, errors } =
@@ -34,8 +36,8 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                 onSuccess: () => {
                     closeForm();
                     Swal.fire({
-                        title: 'Success',
-                        text: 'Cliente actualizado correctamente',
+                        title: __('success'),
+                        text: __('client.updated'),
                         icon: 'success',
                         toast: true,
                         position: 'bottom-end',
@@ -46,8 +48,8 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                 },
                 onError: () => {
                     Swal.fire({
-                        title: 'Error',
-                        text: 'Hubo un problema al actualizar el cliente',
+                        title: __('error'),
+                        text: __('client.update.error'),
                         icon: 'error',
                         toast: true,
                         position: 'bottom-end',
@@ -62,8 +64,8 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                 onSuccess: () => {
                     closeForm();
                     Swal.fire({
-                        title: 'Success',
-                        text: 'Cliente creado correctamente',
+                        title: __('success'),
+                        text: __('client.created'),
                         icon: 'success',
                         toast: true,
                         position: 'bottom-end',
@@ -74,8 +76,8 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                 },
                 onError: () => {
                     Swal.fire({
-                        title: 'Error',
-                        text: 'Hubo un problema al crear el cliente',
+                        title: __('error'),
+                        text: __('client.create.error'),
                         icon: 'error',
                         toast: true,
                         position: 'bottom-end',
@@ -90,19 +92,19 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
 
     const handleDelete = (id: number) => {
         Swal.fire({
-            title: '¿Está seguro?',
-            text: '¿Desea eliminar este cliente?',
+            title: __('client.delete.title'),
+            text: __('client.delete.confirm'),
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonText: 'Sí, eliminar',
-            cancelButtonText: 'Cancelar',
+            confirmButtonText: __('client.delete.confirm.btn'),
+            cancelButtonText: __('client.delete.cancel.btn'),
         }).then((result) => {
             if (result.isConfirmed) {
                 router.delete(route('api.clientes.destroy', id), {
                     onSuccess: () => {
                         Swal.fire({
-                            title: 'Success',
-                            text: 'Cliente eliminado correctamente',
+                            title: __('success'),
+                            text: __('client.deleted'),
                             icon: 'success',
                             toast: true,
                             position: 'bottom-end',
@@ -113,8 +115,8 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                     },
                     onError: () => {
                         Swal.fire({
-                            title: 'Error',
-                            text: 'Hubo un problema al eliminar el cliente',
+                            title: __('error'),
+                            text: __('client.delete.error'),
                             icon: 'error',
                             toast: true,
                             position: 'bottom-end',
@@ -153,7 +155,7 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
     return (
         <div className="container mx-auto p-4">
             <h2 className="mb-4 text-2xl font-bold dark:text-gray-100">
-                Gestión de Clientes
+                {__('clients.management')}
             </h2>
 
             {showForm ? (
@@ -161,7 +163,7 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                     <div>
                         <input
                             type="text"
-                            placeholder="Nombre"
+                            placeholder={__('name')}
                             value={data.nombre}
                             onChange={(e) => setData('nombre', e.target.value)}
                             className="rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
@@ -176,7 +178,7 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                     <div>
                         <input
                             type="email"
-                            placeholder="Email"
+                            placeholder={__('email')}
                             value={data.email}
                             onChange={(e) => setData('email', e.target.value)}
                             className="rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
@@ -191,7 +193,7 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                     <div>
                         <input
                             type="tel"
-                            placeholder="Teléfono"
+                            placeholder={__('phone')}
                             value={data.telefono}
                             onChange={(e) =>
                                 setData('telefono', e.target.value)
@@ -208,7 +210,7 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                     <div>
                         <input
                             type="text"
-                            placeholder="DNI"
+                            placeholder={__('dni')}
                             value={data.dni}
                             onChange={(e) => setData('dni', e.target.value)}
                             className="rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
@@ -225,21 +227,21 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                         disabled={processing}
                         className="mr-4 rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 disabled:opacity-50 dark:bg-blue-600 dark:hover:bg-blue-700"
                     >
-                        {editingId ? 'Actualizar' : 'Crear'} Cliente
+                        {editingId ? __('update') : __('create')} {__('client')}
                     </button>
                     <button
                         onClick={() => closeForm()}
                         className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 disabled:opacity-50 dark:bg-blue-600 dark:hover:bg-blue-700"
                     >
-                        Cancelar
+                        {__('cancel')}
                     </button>
                 </form>
             ) : (
                 <button
                     onClick={() => setShowForm(true)}
-                    className="mb-8 space-y-4 rounded bg-blue-500 px-4 py-2 text-white hover:bg-gray-100 dark:bg-gray-900 dark:hover:bg-blue-700"
+                    className="mb-8 space-y-4 rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 disabled:opacity-50 dark:bg-blue-600 dark:hover:bg-blue-700"
                 >
-                    Crear Cliente
+                    {__('create')} {__('client')}
                 </button>
             )}
 
@@ -248,19 +250,19 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                     <thead>
                         <tr className="dark:bg-gray-700">
                             <th className="px-4 py-2 dark:text-gray-200">
-                                Nombre
+                                {__('name')}
                             </th>
                             <th className="px-4 py-2 dark:text-gray-200">
-                                Email
+                                {__('email')}
                             </th>
                             <th className="px-4 py-2 dark:text-gray-200">
-                                Teléfono
+                                {__('phone')}
                             </th>
                             <th className="px-4 py-2 dark:text-gray-200">
-                                DNI
+                                {__('dni')}
                             </th>
                             <th className="px-4 py-2 dark:text-gray-200">
-                                Acciones
+                                {__('actions')}
                             </th>
                         </tr>
                     </thead>
@@ -287,13 +289,13 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                                         onClick={() => handleEdit(cliente)}
                                         className="mr-2 rounded bg-yellow-500 px-2 py-1 text-white hover:bg-yellow-600 dark:bg-yellow-600 dark:hover:bg-yellow-700"
                                     >
-                                        Editar
+                                        {__('edit')}
                                     </button>
                                     <button
                                         onClick={() => handleDelete(cliente.id)}
                                         className="rounded bg-red-500 px-2 py-1 text-white hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700"
                                     >
-                                        Eliminar
+                                        {__('delete')}
                                     </button>
                                 </td>
                             </tr>

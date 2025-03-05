@@ -20,11 +20,11 @@ export default function Authenticated({
     header,
     children,
 }: AuthenticatedLayoutProps) {
+    useTranslation();
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
-    
+
     // Use the translation hook to ensure re-renders
-    const { currentLanguage } = useTranslation();
 
     return (
         <div className="min-h-screen bg-gray-100 dark:bg-gray-900">

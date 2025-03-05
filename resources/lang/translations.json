@@ -15,18 +15,31 @@
         "es": "Vehículos",
         "en": "Vehicles"
     },
+    "vehicle": {
+        "es": "Vehículo",
+        "en": "Vehicle"
+    },
     "add": {
         "es": "Añadir",
         "en": "Add"
+    },
+    "create": {
+        "es": "Crear",
+        "en": "Create"
     },
     "edit": {
         "es": "Editar",
         "en": "Edit"
     },
+    "update": {
+        "es": "Actualizar",
+        "en": "Update"
+    },
     "delete": {
         "es": "Eliminar",
         "en": "Delete"
     },
+
     "save": {
         "es": "Guardar",
         "en": "Save"
@@ -110,5 +123,149 @@
     "previous": {
         "es": "Anterior",
         "en": "Previous"
+    },
+    "home.welcome": {
+        "es": "Esta pagina es un ejemplo del poder de  Laravel para Manejar una base de datos simple. Puedes crear, ver, editar y eliminar clientes. Todo desde una simple interfaz. Este ejemplo usa una Base de datos de un taller en el que guardamos Clientes y Vehículos. Y cada Vehículo esta asignado a un Cliente.",
+        "en": "This page is an example of the power of  Laravel to manage a simple database. You can create, view, edit and delete clients. All from a simple interface. This example uses a workshop database in which we store Clients and Vehicles. And each Vehicle is assigned to a Client."
+    },
+    "vehicles.title": {
+        "es": "Vehículos",
+        "en": "Vehicles"
+    },
+    "vehicles.management": {
+        "es": "Gestion de Vehículos",
+        "en": "Vehicles management"
+    },
+    "vehicle.updated": {
+        "es": "Vehículo actualizado correctamente",
+        "en": "Vehicle updated successfully"
+    },
+    "vehicle.update.error": {
+        "es": "Hubo un problema al actualizar el vehículo",
+        "en": "There was an error updating the vehicle"
+    },
+    "vehicle.create.error": {
+        "es": "Hubo un problema al crear el vehículo",
+        "en": "There was an error creating the vehicle"
+    },
+    "vehicle.delete.title": {
+        "es": "¿Está seguro?",
+        "en": "Are you sure?"
+    },
+    "vehicle.delete.confirm": {
+        "es": "¿Desea eliminar este vehículo?",
+        "en": "Do you want to delete this vehicle?"
+    },
+    "vehicle.delete.confirm.btn": {
+        "es": "Sí, eliminar",
+        "en": "Yes, delete it"
+    },
+    "vehicle.delete.cancel.btn": {
+        "es": "Cancelar",
+        "en": "Cancel"
+    },
+    "vehicle.deleted": {
+        "es": "Vehículo eliminado correctamente",
+        "en": "Vehicle deleted successfully"
+    },
+    "vehicle.delete.error": {
+        "es": "Hubo un problema al eliminar el vehículo",
+        "en": "There was an error deleting the vehicle"
+    },
+    "brand": {
+        "es": "Marca",
+        "en": "Brand"
+    },
+    "model": {
+        "es": "Modelo",
+        "en": "Model"
+    },
+    "color": {
+        "es": "Color",
+        "en": "Color"
+    },
+    "plate": {
+        "es": "Placa",
+        "en": "Plate"
+    },
+    "year": {
+        "es": "Año",
+        "en": "Year"
+    },
+    "kilometers": {
+        "es": "Kilometraje",
+        "en": "Kilometers"
+    },
+    "customer": {
+        "es": "Cliente",
+        "en": "Customer"
+    },
+    "select_client": {
+        "es": "Seleccionar Cliente",
+        "en": "Select client"
+    },
+    "client": {
+        "es": "Cliente",
+        "en": "Client"
+    },
+    "clients.title": {
+        "es": "Clientes",
+        "en": "Clients"
+    },
+    "clients.management": {
+        "es": "Gestión de Clientes",
+        "en": "Client Management"
+    },
+    "client.updated": {
+        "es": "Cliente actualizado correctamente",
+        "en": "Client updated successfully"
+    },
+    "client.update.error": {
+        "es": "Hubo un problema al actualizar el cliente",
+        "en": "There was an error updating the client"
+    },
+    "client.created": {
+        "es": "Cliente creado correctamente",
+        "en": "Client created successfully"
+    },
+    "client.create.error": {
+        "es": "Hubo un problema al crear el cliente",
+        "en": "There was an error creating the client"
+    },
+    "client.delete.title": {
+        "es": "¿Está seguro?",
+        "en": "Are you sure?"
+    },
+    "client.delete.confirm": {
+        "es": "¿Desea eliminar este cliente?",
+        "en": "Do you want to delete this client?"
+    },
+    "client.delete.confirm.btn": {
+        "es": "Sí, eliminar",
+        "en": "Yes, delete it"
+    },
+    "client.delete.cancel.btn": {
+        "es": "Cancelar",
+        "en": "Cancel"
+    },
+    "client.deleted": {
+        "es": "Cliente eliminado correctamente",
+        "en": "Client deleted successfully"
+    },
+    "client.delete.error": {
+        "es": "Hubo un problema al eliminar el cliente",
+        "en": "There was an error deleting the client"
+    },
+    "dni": {
+        "es": "DNI",
+        "en": "ID"
+    },
+    "success": {
+        "es": "Éxito",
+        "en": "Success"
+    },
+    "error": {
+        "es": "Error",
+        "en": "Error"
     }
 }
