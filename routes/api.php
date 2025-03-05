@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\Route;
 // API routes with 'api' prefix and web middleware for CSRF protection
 Route::middleware('web')->group(function () {
     // Cliente API routes
-    Route::get('/clientes', [ClienteController::class, 'index'])->name('api.clientes.index');
+    Route::get('/clientes', [ClienteController::class, 'list'])->name('api.clientes.index');
     Route::post('/clientes', [ClienteController::class, 'store'])->name('api.clientes.store');
     Route::get('/clientes/{cliente}', [ClienteController::class, 'show'])->name('api.clientes.show');
     Route::put('/clientes/{cliente}', [ClienteController::class, 'update'])->name('api.clientes.update');
     Route::delete('/clientes/{cliente}', [ClienteController::class, 'destroy'])->name('api.clientes.destroy');
 
     // Vehiculo API routes
-    Route::get('/vehiculos', [VehiculoController::class, 'index'])->name('api.vehiculos.index');
+    Route::get('/vehiculos', [VehiculoController::class, 'list'])->name('api.vehiculos.index');
     Route::post('/vehiculos', [VehiculoController::class, 'store'])->name('api.vehiculos.store');
     Route::get('/vehiculos/{vehiculo}', [VehiculoController::class, 'show'])->name('api.vehiculos.show');
     Route::put('/vehiculos/{vehiculo}', [VehiculoController::class, 'update'])->name('api.vehiculos.update');

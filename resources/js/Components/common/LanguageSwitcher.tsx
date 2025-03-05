@@ -23,17 +23,14 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
         { value: 'pt', label: '🇵🇹 PT' },
     ];
 
-    const toggleLanguage = async () => {
+    const switchLanguage = (option: string) => {
+        if (!option) return; // Skip if value is undefined
+
         try {
             setIsChanging(true);
-            // Toggle between English and Spanish
-            const newLanguage = currentLanguage === 'en' ? 'es' : 'en';
-
-            await changeLanguage(newLanguage);
-            localStorage.setItem('language', newLanguage);
+            changeLanguage(option);
+            localStorage.setItem('language', option);
         } catch (error) {
-            console.error('LanguageSwitcher: Error changing language:', error);
-
             Swal.fire({
                 title: 'Error',
                 text: 'Failed to change language',
@@ -44,41 +41,12 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
                 timer: 3000,
                 timerProgressBar: true,
             });
-        } finally {
-            setIsChanging(false);
-        }
-    };
-
-    const switchLanguage = (option: string) => {
-        if (!option) return; // Skip if value is undefined
-
-        try {
-            setIsChanging(true);
-            changeLanguage(option);
-            localStorage.setItem('language', option);
-        } catch (error) {
             console.error('LanguageSwitcher: Error changing language:', error);
         } finally {
             setIsChanging(false);
         }
     };
-    {
-        /* <button
-            onClick={toggleLanguage}
-            disabled={isChanging}
-            className={`flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-700 transition-colors dark:text-gray-300 ${
-                isChanging
-                    ? 'cursor-not-allowed opacity-50'
-                    : 'hover:bg-gray-100 dark:hover:bg-gray-700'
-            } ${className}`}
-            title={`Switch to ${currentLanguage === 'en' ? 'Spanish' : 'English'}`}
-        >
-            <span className="mr-2">
-                {currentLanguage === 'en' ? '🇺🇸' : '🇪🇸'}
-            </span>
-            <span>{currentLanguage === 'en' ? 'EN' : 'ES'}</span>
-        </button> */
-    }
+
     return (
         <div className={`${className} bg-none`}>
             <select

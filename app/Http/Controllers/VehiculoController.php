@@ -15,12 +15,17 @@ class VehiculoController extends Controller
         if (request()->expectsJson()) {
             return Vehiculo::with('cliente')->get();
         }
-        
+
         // For web requests, return Inertia view
         return Inertia::render('Vehiculos/Index', [
             'vehiculos' => Vehiculo::with('cliente')->get(),
             'clientes' => Cliente::all()
         ]);
+    }
+
+    public function list()
+    {
+        return Vehiculo::with('cliente')->get();
     }
 
     public function store(Request $request)
@@ -36,7 +41,7 @@ class VehiculoController extends Controller
         ]);
 
         $vehiculo = Vehiculo::create($request->all());
-        
+
         if ($request->expectsJson()) {
             return $vehiculo;
         }
@@ -62,7 +67,7 @@ class VehiculoController extends Controller
         ]);
 
         $vehiculo->update($request->all());
-        
+
         if ($request->expectsJson()) {
             return $vehiculo;
         }
@@ -73,11 +78,11 @@ class VehiculoController extends Controller
     public function destroy(Vehiculo $vehiculo)
     {
         $vehiculo->delete();
-        
+
         if (request()->expectsJson()) {
             return response()->json(['message' => 'Vehículo eliminado correctamente']);
         }
-        
+
         return redirect()->back();
     }
 }

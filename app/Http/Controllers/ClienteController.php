@@ -10,14 +10,15 @@ class ClienteController extends Controller
 {
     public function index()
     {
-        // For web requests, return Inertia view
-        if (request()->expectsJson()) {
-            return Cliente::with('vehiculos')->get();
-        }
-        
+        // Getting clients from the api route api.clientes.index
         return Inertia::render('Clientes/Index', [
-            'clientes' => Cliente::with('vehiculos')->get()
+            'clientes' => Cliente::with(['vehiculos'])->get()
         ]);
+    }
+
+    public function list()
+    {
+        return Cliente::with('vehiculos')->get();
     }
 
     public function store(Request $request)
@@ -53,7 +54,7 @@ class ClienteController extends Controller
         ]);
 
         $cliente->update($request->all());
-        
+
         if ($request->expectsJson()) {
             return $cliente;
         }
@@ -64,7 +65,7 @@ class ClienteController extends Controller
     public function destroy(Cliente $cliente)
     {
         $cliente->delete();
-        
+
         if (request()->expectsJson()) {
             return response()->json(['message' => 'Cliente eliminado correctamente']);
         }
