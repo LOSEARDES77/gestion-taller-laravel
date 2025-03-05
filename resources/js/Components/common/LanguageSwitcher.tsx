@@ -6,54 +6,64 @@ interface LanguageSwitcherProps {
     className?: string;
 }
 
-export default function LanguageSwitcher({
-    className = '',
-}: LanguageSwitcherProps) {
+interface LanguageOption {
+    value: string;
+    label: string;
+}
+
+export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
     const { currentLanguage, changeLanguage } = useTranslation();
     const [isChanging, setIsChanging] = useState(false);
+
+    const languages: LanguageOption[] = [
+        { value: 'en', label: '🇺🇸 EN' },
+        { value: 'es', label: '🇪🇸 ES' },
+        { value: 'fr', label: '🇫🇷 FR' },
+        { value: 'de', label: '🇩🇪 DE' },
+        { value: 'pt', label: '🇵🇹 PT' },
+    ];
 
     const toggleLanguage = async () => {
         try {
             setIsChanging(true);
-
             // Toggle between English and Spanish
             const newLanguage = currentLanguage === 'en' ? 'es' : 'en';
 
             await changeLanguage(newLanguage);
             localStorage.setItem('language', newLanguage);
+        } catch (error) {
+            console.error('LanguageSwitcher: Error changing language:', error);
 
-            // Show notification after language change
             Swal.fire({
-                title:
-                    newLanguage === 'en'
-                        ? 'Language changed to English'
-                        : 'Idioma cambiado a Español',
-                icon: 'success',
+                title: 'Error',
+                text: 'Failed to change language',
+                icon: 'error',
                 toast: true,
                 position: 'bottom-end',
                 showConfirmButton: false,
                 timer: 3000,
                 timerProgressBar: true,
             });
-        } catch (error) {
-            console.error('LanguageSwitcher: Error changing language:', error);
-
-            // Show error notification
-            Swal.fire({
-                title: 'Error changing language',
-                icon: 'error',
-                toast: true,
-                position: 'bottom-end',
-                showConfirmButton: false,
-                timer: 3000,
-            });
         } finally {
             setIsChanging(false);
         }
     };
 
-    return (
-        <button
+    const switchLanguage = (option: string) => {
+        if (!option) return; // Skip if value is undefined
+
+        try {
+            setIsChanging(true);
+            changeLanguage(option);
+            localStorage.setItem('language', option);
+        } catch (error) {
+            console.error('LanguageSwitcher: Error changing language:', error);
+        } finally {
+            setIsChanging(false);
+        }
+    };
+    {
+        /* <button
             onClick={toggleLanguage}
             disabled={isChanging}
             className={`flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-700 transition-colors dark:text-gray-300 ${
@@ -67,6 +77,22 @@ export default function LanguageSwitcher({
                 {currentLanguage === 'en' ? '🇺🇸' : '🇪🇸'}
             </span>
             <span>{currentLanguage === 'en' ? 'EN' : 'ES'}</span>
-        </button>
+        </button> */
+    }
+    return (
+        <div className={`${className} bg-none`}>
+            <select
+                disabled={isChanging}
+                value={currentLanguage}
+                className={`block w-full rounded-md bg-gray-100 shadow-sm dark:bg-gray-700 dark:text-gray-300 sm:text-sm ${isChanging ? 'cursor-not-allowed opacity-50' : ''}`}
+                onChange={(e) => switchLanguage(e.target.value)}
+            >
+                {languages.map((lang) => (
+                    <option key={lang.value} value={lang.value}>
+                        {lang.label}
+                    </option>
+                ))}
+            </select>
+        </div>
     );
 }

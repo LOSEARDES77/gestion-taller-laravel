@@ -7,6 +7,9 @@ interface Translations {
     };
 }
 
+// Supported languages
+export const supportedLanguages = ['en', 'es', 'fr', 'de', 'pt'];
+
 // Store translations once loaded
 let translations: Translations = {};
 let currentLanguage: string = localStorage.getItem('language') || 'en'; // Get from localStorage or use default

@@ -1,271 +1,542 @@
 {
     "welcome": {
         "es": "Bienvenido",
-        "en": "Welcome"
+        "en": "Welcome",
+        "fr": "Bienvenue",
+        "de": "Willkommen",
+        "pt": "Bem-vindo"
     },
     "home": {
         "es": "Inicio",
-        "en": "Home"
+        "en": "Home",
+        "fr": "Accueil",
+        "de": "Startseite",
+        "pt": "Início"
     },
     "clients": {
         "es": "Clientes",
-        "en": "Clients"
+        "en": "Clients",
+        "fr": "Clients",
+        "de": "Kunden",
+        "pt": "Clientes"
     },
     "vehicles": {
         "es": "Vehículos",
-        "en": "Vehicles"
+        "en": "Vehicles",
+        "fr": "Véhicules",
+        "de": "Fahrzeuge",
+        "pt": "Veículos"
     },
     "vehicle": {
         "es": "Vehículo",
-        "en": "Vehicle"
+        "en": "Vehicle",
+        "fr": "Véhicule",
+        "de": "Fahrzeug",
+        "pt": "Veículo"
     },
     "add": {
         "es": "Añadir",
-        "en": "Add"
+        "en": "Add",
+        "fr": "Ajouter",
+        "de": "Hinzufügen",
+        "pt": "Adicionar"
     },
     "create": {
         "es": "Crear",
-        "en": "Create"
+        "en": "Create",
+        "fr": "Créer",
+        "de": "Erstellen",
+        "pt": "Criar"
     },
     "edit": {
         "es": "Editar",
-        "en": "Edit"
+        "en": "Edit",
+        "fr": "Modifier",
+        "de": "Bearbeiten",
+        "pt": "Editar"
     },
     "update": {
         "es": "Actualizar",
-        "en": "Update"
+        "en": "Update",
+        "fr": "Mettre à jour",
+        "de": "Aktualisieren",
+        "pt": "Atualizar"
     },
     "delete": {
         "es": "Eliminar",
-        "en": "Delete"
+        "en": "Delete",
+        "fr": "Supprimer",
+        "de": "Löschen",
+        "pt": "Excluir"
     },
 
     "save": {
         "es": "Guardar",
-        "en": "Save"
+        "en": "Save",
+        "fr": "Enregistrer",
+        "de": "Speichern",
+        "pt": "Salvar"
     },
     "cancel": {
         "es": "Cancelar",
-        "en": "Cancel"
-    },
-    "name": {
-        "es": "Nombre",
-        "en": "Name"
-    },
-    "email": {
-        "es": "Correo electrónico",
-        "en": "Email"
-    },
-    "phone": {
-        "es": "Teléfono",
-        "en": "Phone"
-    },
-    "address": {
-        "es": "Dirección",
-        "en": "Address"
-    },
-    "switch_language": {
-        "es": "Cambiar idioma",
-        "en": "Switch language"
-    },
-    "profile": {
-        "es": "Perfil",
-        "en": "Profile"
-    },
-    "logout": {
-        "es": "Cerrar sesión",
-        "en": "Log out"
-    },
-    "loading": {
-        "es": "Cargando...",
-        "en": "Loading..."
-    },
-    "loading_translations": {
-        "es": "Cargando traducciones...",
-        "en": "Loading translations..."
-    },
-    "language_changed": {
-        "es": "Idioma cambiado a Español",
-        "en": "Language changed to English"
-    },
-    "error_loading_translations": {
-        "es": "Error al cargar las traducciones",
-        "en": "Error loading translations"
+        "en": "Cancel",
+        "fr": "Annuler",
+        "de": "Abbrechen",
+        "pt": "Cancelar"
     },
     "search": {
         "es": "Buscar",
-        "en": "Search"
+        "en": "Search",
+        "fr": "Rechercher",
+        "de": "Suchen",
+        "pt": "Pesquisar"
     },
     "filter": {
         "es": "Filtrar",
-        "en": "Filter"
+        "en": "Filter",
+        "fr": "Filtrer",
+        "de": "Filtern",
+        "pt": "Filtrar"
+    },
+    "sort": {
+        "es": "Ordenar",
+        "en": "Sort",
+        "fr": "Trier",
+        "de": "Sortieren",
+        "pt": "Ordenar"
+    },
+    "view": {
+        "es": "Ver",
+        "en": "View",
+        "fr": "Voir",
+        "de": "Ansehen",
+        "pt": "Ver"
     },
     "details": {
         "es": "Detalles",
-        "en": "Details"
+        "en": "Details",
+        "fr": "Détails",
+        "de": "Details",
+        "pt": "Detalhes"
     },
-    "actions": {
-        "es": "Acciones",
-        "en": "Actions"
+    "settings": {
+        "es": "Configuración",
+        "en": "Settings",
+        "fr": "Paramètres",
+        "de": "Einstellungen",
+        "pt": "Configurações"
+    },
+    "profile": {
+        "es": "Perfil",
+        "en": "Profile",
+        "fr": "Profil",
+        "de": "Profil",
+        "pt": "Perfil"
+    },
+    "logout": {
+        "es": "Cerrar sesión",
+        "en": "Logout",
+        "fr": "Déconnexion",
+        "de": "Abmelden",
+        "pt": "Sair"
+    },
+    "login": {
+        "es": "Iniciar sesión",
+        "en": "Login",
+        "fr": "Connexion",
+        "de": "Anmelden",
+        "pt": "Entrar"
+    },
+    "register": {
+        "es": "Registrarse",
+        "en": "Register",
+        "fr": "S'inscrire",
+        "de": "Registrieren",
+        "pt": "Registrar"
+    },
+    "password": {
+        "es": "Contraseña",
+        "en": "Password",
+        "fr": "Mot de passe",
+        "de": "Passwort",
+        "pt": "Senha"
     },
     "confirm": {
         "es": "Confirmar",
-        "en": "Confirm"
+        "en": "Confirm",
+        "fr": "Confirmer",
+        "de": "Bestätigen",
+        "pt": "Confirmar"
+    },
+    "submit": {
+        "es": "Enviar",
+        "en": "Submit",
+        "fr": "Soumettre",
+        "de": "Absenden",
+        "pt": "Enviar"
+    },
+    "reset": {
+        "es": "Restablecer",
+        "en": "Reset",
+        "fr": "Réinitialiser",
+        "de": "Zurücksetzen",
+        "pt": "Redefinir"
+    },
+    "forgot": {
+        "es": "Olvidé",
+        "en": "Forgot",
+        "fr": "Oublié",
+        "de": "Vergessen",
+        "pt": "Esqueci"
+    },
+    "remember": {
+        "es": "Recordar",
+        "en": "Remember",
+        "fr": "Se souvenir",
+        "de": "Merken",
+        "pt": "Lembrar"
+    },
+    "or": {
+        "es": "O",
+        "en": "Or",
+        "fr": "Ou",
+        "de": "Oder",
+        "pt": "Ou"
+    },
+    "and": {
+        "es": "Y",
+        "en": "And",
+        "fr": "Et",
+        "de": "Und",
+        "pt": "E"
+    },
+    "yes": {
+        "es": "Sí",
+        "en": "Yes",
+        "fr": "Oui",
+        "de": "Ja",
+        "pt": "Sim"
+    },
+    "no": {
+        "es": "No",
+        "en": "No",
+        "fr": "Non",
+        "de": "Nein",
+        "pt": "Não"
+    },
+    "ok": {
+        "es": "OK",
+        "en": "OK",
+        "fr": "OK",
+        "de": "OK",
+        "pt": "OK"
+    },
+    "close": {
+        "es": "Cerrar",
+        "en": "Close",
+        "fr": "Fermer",
+        "de": "Schließen",
+        "pt": "Fechar"
     },
     "back": {
-        "es": "Volver",
-        "en": "Back"
+        "es": "Atrás",
+        "en": "Back",
+        "fr": "Retour",
+        "de": "Zurück",
+        "pt": "Voltar"
     },
     "next": {
         "es": "Siguiente",
-        "en": "Next"
+        "en": "Next",
+        "fr": "Suivant",
+        "de": "Weiter",
+        "pt": "Próximo"
     },
     "previous": {
         "es": "Anterior",
-        "en": "Previous"
+        "en": "Previous",
+        "fr": "Précédent",
+        "de": "Vorherige",
+        "pt": "Anterior"
     },
     "home.welcome": {
         "es": "Esta pagina es un ejemplo del poder de  Laravel para Manejar una base de datos simple. Puedes crear, ver, editar y eliminar clientes. Todo desde una simple interfaz. Este ejemplo usa una Base de datos de un taller en el que guardamos Clientes y Vehículos. Y cada Vehículo esta asignado a un Cliente.",
-        "en": "This page is an example of the power of  Laravel to manage a simple database. You can create, view, edit and delete clients. All from a simple interface. This example uses a workshop database in which we store Clients and Vehicles. And each Vehicle is assigned to a Client."
+        "en": "This page is an example of the power of  Laravel to manage a simple database. You can create, view, edit and delete clients. All from a simple interface. This example uses a workshop database in which we store Clients and Vehicles. And each Vehicle is assigned to a Client.",
+        "fr": "Cette page est un exemple de la puissance de Laravel pour gérer une base de données simple. Vous pouvez créer, afficher, modifier et supprimer des clients. Le tout depuis une interface simple. Cet exemple utilise une base de données d'atelier dans laquelle nous stockons des clients et des véhicules. Et chaque véhicule est attribué à un client.",
+        "de": "Diese Seite ist ein Beispiel für die Leistungsfähigkeit von Laravel zur Verwaltung einer einfachen Datenbank. Sie können Kunden erstellen, anzeigen, bearbeiten und löschen. Alles über eine einfache Oberfläche. Dieses Beispiel verwendet eine Werkstattdatenbank, in der wir Kunden und Fahrzeuge speichern. Und jedes Fahrzeug ist einem Kunden zugeordnet.",
+        "pt": "Esta página é um exemplo do poder do Laravel para gerenciar um banco de dados simples. Você pode criar, visualizar, editar e excluir clientes. Tudo a partir de uma interface simples. Este exemplo usa um banco de dados de oficina no qual armazenamos Clientes e Veículos. E cada Veículo é atribuído a um Cliente."
     },
     "vehicles.title": {
         "es": "Vehículos",
-        "en": "Vehicles"
+        "en": "Vehicles",
+        "fr": "Véhicules",
+        "de": "Fahrzeuge",
+        "pt": "Veículos"
     },
     "vehicles.management": {
         "es": "Gestion de Vehículos",
-        "en": "Vehicles management"
+        "en": "Vehicles management",
+        "fr": "Gestion des véhicules",
+        "de": "Fahrzeugverwaltung",
+        "pt": "Gestão de veículos"
     },
     "vehicle.updated": {
         "es": "Vehículo actualizado correctamente",
-        "en": "Vehicle updated successfully"
+        "en": "Vehicle updated successfully",
+        "fr": "Véhicule mis à jour avec succès",
+        "de": "Fahrzeug erfolgreich aktualisiert",
+        "pt": "Veículo atualizado com sucesso"
     },
     "vehicle.update.error": {
         "es": "Hubo un problema al actualizar el vehículo",
-        "en": "There was an error updating the vehicle"
+        "en": "There was an error updating the vehicle",
+        "fr": "Une erreur s'est produite lors de la mise à jour du véhicule",
+        "de": "Beim Aktualisieren des Fahrzeugs ist ein Fehler aufgetreten",
+        "pt": "Ocorreu um erro ao atualizar o veículo"
     },
     "vehicle.create.error": {
         "es": "Hubo un problema al crear el vehículo",
-        "en": "There was an error creating the vehicle"
+        "en": "There was an error creating the vehicle",
+        "fr": "Une erreur s'est produite lors de la création du véhicule",
+        "de": "Beim Erstellen des Fahrzeugs ist ein Fehler aufgetreten",
+        "pt": "Ocorreu um erro ao criar o veículo"
     },
     "vehicle.delete.title": {
         "es": "¿Está seguro?",
-        "en": "Are you sure?"
+        "en": "Are you sure?",
+        "fr": "Êtes-vous sûr?",
+        "de": "Sind Sie sicher?",
+        "pt": "Tem certeza?"
     },
     "vehicle.delete.confirm": {
         "es": "¿Desea eliminar este vehículo?",
-        "en": "Do you want to delete this vehicle?"
+        "en": "Do you want to delete this vehicle?",
+        "fr": "Voulez-vous supprimer ce véhicule?",
+        "de": "Möchten Sie dieses Fahrzeug löschen?",
+        "pt": "Deseja excluir este veículo?"
     },
     "vehicle.delete.confirm.btn": {
         "es": "Sí, eliminar",
-        "en": "Yes, delete it"
+        "en": "Yes, delete it",
+        "fr": "Oui, supprimer",
+        "de": "Ja, löschen",
+        "pt": "Sim, excluir"
     },
     "vehicle.delete.cancel.btn": {
         "es": "Cancelar",
-        "en": "Cancel"
+        "en": "Cancel",
+        "fr": "Annuler",
+        "de": "Abbrechen",
+        "pt": "Cancelar"
     },
     "vehicle.deleted": {
         "es": "Vehículo eliminado correctamente",
-        "en": "Vehicle deleted successfully"
+        "en": "Vehicle deleted successfully",
+        "fr": "Véhicule supprimé avec succès",
+        "de": "Fahrzeug erfolgreich gelöscht",
+        "pt": "Veículo excluído com sucesso"
     },
     "vehicle.delete.error": {
         "es": "Hubo un problema al eliminar el vehículo",
-        "en": "There was an error deleting the vehicle"
+        "en": "There was an error deleting the vehicle",
+        "fr": "Une erreur s'est produite lors de la suppression du véhicule",
+        "de": "Beim Löschen des Fahrzeugs ist ein Fehler aufgetreten",
+        "pt": "Ocorreu um erro ao excluir o veículo"
     },
     "brand": {
         "es": "Marca",
-        "en": "Brand"
+        "en": "Brand",
+        "fr": "Marque",
+        "de": "Marke",
+        "pt": "Marca"
     },
     "model": {
         "es": "Modelo",
-        "en": "Model"
+        "en": "Model",
+        "fr": "Modèle",
+        "de": "Modell",
+        "pt": "Modelo"
     },
     "color": {
         "es": "Color",
-        "en": "Color"
+        "en": "Color",
+        "fr": "Couleur",
+        "de": "Farbe",
+        "pt": "Cor"
     },
     "plate": {
         "es": "Placa",
-        "en": "Plate"
+        "en": "Plate",
+        "fr": "Plaque",
+        "de": "Kennzeichen",
+        "pt": "Placa"
     },
     "year": {
         "es": "Año",
-        "en": "Year"
+        "en": "Year",
+        "fr": "Année",
+        "de": "Jahr",
+        "pt": "Ano"
     },
     "kilometers": {
         "es": "Kilometraje",
-        "en": "Kilometers"
+        "en": "Kilometers",
+        "fr": "Kilométrage",
+        "de": "Kilometerstand",
+        "pt": "Quilometragem"
     },
     "customer": {
         "es": "Cliente",
-        "en": "Customer"
+        "en": "Customer",
+        "fr": "Client",
+        "de": "Kunde",
+        "pt": "Cliente"
     },
     "select_client": {
         "es": "Seleccionar Cliente",
-        "en": "Select client"
+        "en": "Select client",
+        "fr": "Sélectionner un client",
+        "de": "Kunde auswählen",
+        "pt": "Selecionar cliente"
     },
     "client": {
         "es": "Cliente",
-        "en": "Client"
+        "en": "Client",
+        "fr": "Client",
+        "de": "Kunde",
+        "pt": "Cliente"
     },
     "clients.title": {
         "es": "Clientes",
-        "en": "Clients"
+        "en": "Clients",
+        "fr": "Clients",
+        "de": "Kunden",
+        "pt": "Clientes"
     },
     "clients.management": {
         "es": "Gestión de Clientes",
-        "en": "Client Management"
+        "en": "Client Management",
+        "fr": "Gestion des clients",
+        "de": "Kundenverwaltung",
+        "pt": "Gestão de clientes"
     },
     "client.updated": {
         "es": "Cliente actualizado correctamente",
-        "en": "Client updated successfully"
+        "en": "Client updated successfully",
+        "fr": "Client mis à jour avec succès",
+        "de": "Kunde erfolgreich aktualisiert",
+        "pt": "Cliente atualizado com sucesso"
     },
     "client.update.error": {
         "es": "Hubo un problema al actualizar el cliente",
-        "en": "There was an error updating the client"
+        "en": "There was an error updating the client",
+        "fr": "Une erreur s'est produite lors de la mise à jour du client",
+        "de": "Beim Aktualisieren des Kunden ist ein Fehler aufgetreten",
+        "pt": "Ocorreu um erro ao atualizar o cliente"
     },
     "client.created": {
         "es": "Cliente creado correctamente",
-        "en": "Client created successfully"
+        "en": "Client created successfully",
+        "fr": "Client créé avec succès",
+        "de": "Kunde erfolgreich erstellt",
+        "pt": "Cliente criado com sucesso"
     },
     "client.create.error": {
         "es": "Hubo un problema al crear el cliente",
-        "en": "There was an error creating the client"
+        "en": "There was an error creating the client",
+        "fr": "Une erreur s'est produite lors de la création du client",
+        "de": "Beim Erstellen des Kunden ist ein Fehler aufgetreten",
+        "pt": "Ocorreu um erro ao criar o cliente"
     },
     "client.delete.title": {
         "es": "¿Está seguro?",
-        "en": "Are you sure?"
+        "en": "Are you sure?",
+        "fr": "Êtes-vous sûr?",
+        "de": "Sind Sie sicher?",
+        "pt": "Tem certeza?"
     },
     "client.delete.confirm": {
         "es": "¿Desea eliminar este cliente?",
-        "en": "Do you want to delete this client?"
+        "en": "Do you want to delete this client?",
+        "fr": "Voulez-vous supprimer ce client?",
+        "de": "Möchten Sie diesen Kunden löschen?",
+        "pt": "Deseja excluir este cliente?"
     },
     "client.delete.confirm.btn": {
         "es": "Sí, eliminar",
-        "en": "Yes, delete it"
+        "en": "Yes, delete it",
+        "fr": "Oui, supprimer",
+        "de": "Ja, löschen",
+        "pt": "Sim, excluir"
     },
     "client.delete.cancel.btn": {
         "es": "Cancelar",
-        "en": "Cancel"
+        "en": "Cancel",
+        "fr": "Annuler",
+        "de": "Abbrechen",
+        "pt": "Cancelar"
     },
     "client.deleted": {
         "es": "Cliente eliminado correctamente",
-        "en": "Client deleted successfully"
+        "en": "Client deleted successfully",
+        "fr": "Client supprimé avec succès",
+        "de": "Kunde erfolgreich gelöscht",
+        "pt": "Cliente excluído com sucesso"
     },
     "client.delete.error": {
         "es": "Hubo un problema al eliminar el cliente",
-        "en": "There was an error deleting the client"
+        "en": "There was an error deleting the client",
+        "fr": "Une erreur s'est produite lors de la suppression du client",
+        "de": "Beim Löschen des Kunden ist ein Fehler aufgetreten",
+        "pt": "Ocorreu um erro ao excluir o cliente"
     },
     "dni": {
         "es": "DNI",
-        "en": "ID"
+        "en": "ID",
+        "fr": "Pièce d'identité",
+        "de": "Ausweis",
+        "pt": "CPF"
     },
     "success": {
         "es": "Éxito",
-        "en": "Success"
+        "en": "Success",
+        "fr": "Succès",
+        "de": "Erfolg",
+        "pt": "Sucesso"
     },
     "error": {
         "es": "Error",
-        "en": "Error"
+        "en": "Error",
+        "fr": "Erreur",
+        "de": "Fehler",
+        "pt": "Erro"
+    },
+    "name": {
+        "es": "Nombre",
+        "en": "Name",
+        "fr": "Nom",
+        "de": "Name",
+        "pt": "Nome"
+    },
+    "email": {
+        "es": "Correo electrónico",
+        "en": "Email",
+        "fr": "Email",
+        "de": "E-Mail",
+        "pt": "Email"
+    },
+    "phone": {
+        "es": "Teléfono",
+        "en": "Phone",
+        "fr": "Téléphone",
+        "de": "Telefon",
+        "pt": "Telefone"
+    },
+    "actions": {
+        "es": "Acciones",
+        "en": "Actions",
+        "fr": "Actions",
+        "de": "Aktionen",
+        "pt": "Ações"
     }
 }

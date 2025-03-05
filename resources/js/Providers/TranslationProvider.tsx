@@ -62,7 +62,9 @@ export function TranslationProvider({ children }: TranslationProviderProps) {
                 const browserLang = navigator.language.split('-')[0];
                 const language =
                     localStorage.getItem('language') ??
-                    (['en', 'es'].includes(browserLang) ? browserLang : 'en');
+                    (['en', 'es', 'fr', 'de', 'pt'].includes(browserLang)
+                        ? browserLang
+                        : 'en');
 
                 // Initialize translations
                 await initTranslations(language);
