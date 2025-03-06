@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cliente;
+use App\Rules\ValidDni;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -24,10 +25,10 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nombre' => 'required|string',
+            'nombre' => 'required|string|min:3|max:255',
             'email' => 'required|email|unique:clientes',
-            'telefono' => 'required|string',
-            'dni' => 'required|string|unique:clientes'
+            'telefono' => 'required|string|regex:/^[0-9]{9}$/',
+            'dni' => ['required', 'string', 'unique:clientes', new ValidDni]
         ]);
 
         $cliente = Cliente::create($request->all());
@@ -47,10 +48,10 @@ class ClienteController extends Controller
     public function update(Request $request, Cliente $cliente)
     {
         $request->validate([
-            'nombre' => 'required|string',
+            'nombre' => 'required|string|min:3|max:255',
             'email' => 'required|email|unique:clientes,email,' . $cliente->id,
-            'telefono' => 'required|string',
-            'dni' => 'required|string|unique:clientes,dni,' . $cliente->id
+            'telefono' => 'required|string|regex:/^[0-9]{9}$/',
+            'dni' => ['required', 'string', 'unique:clientes,dni,' . $cliente->id, new ValidDni]
         ]);
 
         $cliente->update($request->all());

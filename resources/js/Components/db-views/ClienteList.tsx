@@ -1,7 +1,7 @@
 import { __, useTranslation } from '@/Providers/TranslationProvider';
 import { Cliente } from '@/types/index';
 import { router, useForm } from '@inertiajs/react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 
 interface ClienteListProps {
@@ -21,16 +21,98 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
     useTranslation();
     const [editingId, setEditingId] = useState<number | null>(null);
     const [showForm, setShowForm] = useState(false);
-    const { data, setData, post, put, processing, errors } =
-        useForm<ClienteForm>({
-            nombre: '',
-            email: '',
-            telefono: '',
-            dni: '',
-        });
+    const [clientErrors, setClientErrors] = useState<Record<string, string>>(
+        {},
+    );
+    const {
+        data,
+        setData,
+        post,
+        put,
+        processing,
+        errors,
+        clearErrors,
+        setError,
+    } = useForm<ClienteForm>({
+        nombre: '',
+        email: '',
+        telefono: '',
+        dni: '',
+    });
+
+    // Clear client errors when form data changes
+    useEffect(() => {
+        setClientErrors({});
+        clearErrors();
+    }, [data, clearErrors]);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+
+        // Basic client-side validation before sending to server
+        let hasErrors = false;
+        const newClientErrors: Record<string, string> = {};
+
+        // Validate name (minimum 3 characters)
+        if (data.nombre.length < 3) {
+            newClientErrors.nombre = __('client.validation.nombre.min');
+            hasErrors = true;
+        }
+
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(data.email as string)) {
+            newClientErrors.email = __('client.validation.email.format');
+            hasErrors = true;
+        }
+
+        // Validate phone number (9 digits)
+        const phoneRegex = /^[0-9]{9}$/;
+        if (!phoneRegex.test(data.telefono as string)) {
+            newClientErrors.telefono = __('client.validation.telefono.format');
+            hasErrors = true;
+        }
+
+        // Basic DNI format validation (8 digits + 1 letter)
+        const dniRegex = /^[0-9]{8}[a-zA-Z]$/;
+        if (!dniRegex.test(data.dni as string)) {
+            newClientErrors.dni = __('client.validation.dni.format');
+            hasErrors = true;
+        } else {
+            const dniNumber = data.dni.substring(0, 8);
+            const dniLetter = data.dni.substring(8, 9).toUpperCase();
+            const validLetters = 'TRWAGMYFPDXBNJZSQVHLCKE';
+            const expectedLetter = validLetters[parseInt(dniNumber) % 23];
+
+            if (dniLetter !== expectedLetter) {
+                newClientErrors.dni = __('client.validation.dni.letter');
+                hasErrors = true;
+            }
+        }
+
+        if (hasErrors) {
+            // Set client-side errors using the proper Inertia method
+            Object.entries(newClientErrors).forEach(([key, value]) => {
+                setError(key, value);
+            });
+
+            // Also update our local state for client errors
+            setClientErrors(newClientErrors);
+
+            Swal.fire({
+                title: __('error'),
+                text: __('client.validation.errors'),
+                icon: 'error',
+                toast: true,
+                position: 'top',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+            });
+
+            return;
+        }
+
         if (editingId) {
             put(route('api.clientes.update', editingId), {
                 onSuccess: () => {
@@ -40,19 +122,21 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                         text: __('client.updated'),
                         icon: 'success',
                         toast: true,
-                        position: 'bottom-end',
+                        position: 'top',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
                     });
                 },
-                onError: () => {
+                onError: (errors) => {
+                    // Server validation errors will be automatically set to the errors object
+                    // Display a general error message
                     Swal.fire({
                         title: __('error'),
                         text: __('client.update.error'),
                         icon: 'error',
                         toast: true,
-                        position: 'bottom-end',
+                        position: 'top',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
@@ -68,19 +152,21 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                         text: __('client.created'),
                         icon: 'success',
                         toast: true,
-                        position: 'bottom-end',
+                        position: 'top',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
                     });
                 },
-                onError: () => {
+                onError: (errors) => {
+                    // Server validation errors will be automatically set to the errors object
+                    // Display a general error message
                     Swal.fire({
                         title: __('error'),
                         text: __('client.create.error'),
                         icon: 'error',
                         toast: true,
-                        position: 'bottom-end',
+                        position: 'top',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
@@ -107,7 +193,7 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                             text: __('client.deleted'),
                             icon: 'success',
                             toast: true,
-                            position: 'bottom-end',
+                            position: 'top',
                             showConfirmButton: false,
                             timer: 3000,
                             timerProgressBar: true,
@@ -119,7 +205,7 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                             text: __('client.delete.error'),
                             icon: 'error',
                             toast: true,
-                            position: 'bottom-end',
+                            position: 'top',
                             showConfirmButton: false,
                             timer: 3000,
                             timerProgressBar: true,
@@ -150,6 +236,8 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
             telefono: '',
             dni: '',
         });
+        setClientErrors({});
+        clearErrors();
     };
 
     return (
@@ -166,7 +254,9 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                             placeholder={__('name')}
                             value={data.nombre}
                             onChange={(e) => setData('nombre', e.target.value)}
-                            className="rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+                            className={`rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 ${
+                                errors.nombre ? 'border-red-500' : ''
+                            }`}
                             required
                         />
                         {errors.nombre && (
@@ -181,7 +271,9 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                             placeholder={__('email')}
                             value={data.email}
                             onChange={(e) => setData('email', e.target.value)}
-                            className="rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+                            className={`rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 ${
+                                errors.email ? 'border-red-500' : ''
+                            }`}
                             required
                         />
                         {errors.email && (
@@ -198,7 +290,9 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                             onChange={(e) =>
                                 setData('telefono', e.target.value)
                             }
-                            className="rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+                            className={`rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 ${
+                                errors.telefono ? 'border-red-500' : ''
+                            }`}
                             required
                         />
                         {errors.telefono && (
@@ -213,7 +307,9 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                             placeholder={__('dni')}
                             value={data.dni}
                             onChange={(e) => setData('dni', e.target.value)}
-                            className="rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+                            className={`rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 ${
+                                errors.dni ? 'border-red-500' : ''
+                            }`}
                             required
                         />
                         {errors.dni && (

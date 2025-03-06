@@ -2,6 +2,7 @@ import VehiculoList from '@/Components/db-views/VehiculoList';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { __, useTranslation } from '@/Providers/TranslationProvider';
 import { Cliente, PageProps, Vehiculo } from '@/types';
+import { Head } from '@inertiajs/react';
 import React from 'react';
 
 interface Props extends Record<string, unknown> {
@@ -20,6 +21,7 @@ const Index: React.FC<PageProps<Props>> = ({ auth, vehiculos, clientes }) => {
                 </h2>
             }
         >
+            <Head title={__('vehicles.title')} />
             <div className="py-12">
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="overflow-hidden bg-white shadow-sm dark:border dark:border-gray-700 dark:bg-gray-800 sm:rounded-lg">

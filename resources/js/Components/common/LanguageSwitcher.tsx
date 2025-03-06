@@ -36,7 +36,7 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
                 text: 'Failed to change language',
                 icon: 'error',
                 toast: true,
-                position: 'bottom-end',
+                position: 'top',
                 showConfirmButton: false,
                 timer: 3000,
                 timerProgressBar: true,

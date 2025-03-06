@@ -1,7 +1,7 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { __, useTranslation } from '@/Providers/TranslationProvider';
 import { PageProps } from '@/types';
-import { usePage } from '@inertiajs/react';
+import { Head, usePage } from '@inertiajs/react';
 
 export default function Dashboard() {
     const { auth } = usePage<PageProps>().props;
@@ -15,6 +15,7 @@ export default function Dashboard() {
                 </h2>
             }
         >
+            <Head title={__('home')} />
             <div className="py-12">
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="overflow-hidden bg-white shadow-sm dark:bg-gray-800 sm:rounded-lg">

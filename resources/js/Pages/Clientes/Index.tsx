@@ -2,6 +2,7 @@ import ClienteList from '@/Components/db-views/ClienteList';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { __, useTranslation } from '@/Providers/TranslationProvider';
 import { Cliente, PageProps } from '@/types';
+import { Head } from '@inertiajs/react';
 import React from 'react';
 
 interface Props extends Record<string, unknown> {
@@ -19,6 +20,7 @@ const Index: React.FC<PageProps<Props>> = ({ auth, clientes }) => {
                 </h2>
             }
         >
+            <Head title={__('clients.title')} />
             <div className="py-12">
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="overflow-hidden bg-white shadow-sm dark:border dark:border-gray-700 dark:bg-gray-800 sm:rounded-lg">

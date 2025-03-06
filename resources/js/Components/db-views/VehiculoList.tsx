@@ -1,7 +1,7 @@
 import { __, useTranslation } from '@/Providers/TranslationProvider';
 import { Cliente, Vehiculo } from '@/types/index';
 import { router, useForm } from '@inertiajs/react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 
 interface VehiculoListProps {
@@ -25,19 +25,82 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
     useTranslation();
     const [editingId, setEditingId] = useState<number | null>(null);
     const [showForm, setShowForm] = useState(false);
-    const { data, setData, post, put, processing, errors } =
-        useForm<VehiculoForm>({
-            marca: '',
-            modelo: '',
-            color: '',
-            placa: '',
-            anio: '',
-            kilometraje: '',
-            cliente_id: '',
-        });
+    const [clientErrors, setClientErrors] = useState<Record<string, string>>(
+        {},
+    );
+    const {
+        data,
+        setData,
+        post,
+        put,
+        processing,
+        errors,
+        clearErrors,
+        setError,
+    } = useForm<VehiculoForm>({
+        marca: '',
+        modelo: '',
+        color: '',
+        placa: '',
+        anio: '',
+        kilometraje: '',
+        cliente_id: '',
+    });
+
+    // Clear client errors when form data changes
+    useEffect(() => {
+        setClientErrors({});
+        clearErrors();
+    }, [data, clearErrors]);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+
+        // Basic client-side validation before sending to server
+        const currentYear = new Date().getFullYear();
+        let hasErrors = false;
+        const newClientErrors: Record<string, string> = {};
+
+        // Validate kilometraje (non-negative)
+        if (parseInt(data.kilometraje as string) < 0) {
+            newClientErrors.kilometraje = __(
+                'vehicle.validation.kilometraje.positive',
+            );
+            hasErrors = true;
+        }
+
+        // Validate year (between 1900 and current year + 1)
+        const yearValue = parseInt(data.anio as string);
+        if (yearValue < 1900 || yearValue > currentYear + 1) {
+            newClientErrors.anio = __('vehicle.validation.anio.range');
+            hasErrors = true;
+        }
+
+        // If client-side validation fails, show errors and return
+        if (hasErrors) {
+            // Set client-side errors using the proper Inertia method
+            Object.entries(newClientErrors).forEach(([key, value]) => {
+                setError(key, value);
+            });
+
+            // Also update our local state for client errors
+            setClientErrors(newClientErrors);
+
+            // Show error message
+            Swal.fire({
+                title: 'Error',
+                text: __('vehicle.validation.errors'),
+                icon: 'error',
+                toast: true,
+                position: 'top',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+            });
+
+            return;
+        }
+
         if (editingId) {
             put(route('api.vehiculos.update', editingId), {
                 onSuccess: () => {
@@ -47,19 +110,21 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                         text: __('vehicle.updated'),
                         icon: 'success',
                         toast: true,
-                        position: 'bottom-end',
+                        position: 'top',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
                     });
                 },
-                onError: () => {
+                onError: (errors) => {
+                    // Server validation errors will be automatically set to the errors object
+                    // Display a general error message
                     Swal.fire({
                         title: 'Error',
                         text: __('vehicle.update.error'),
                         icon: 'error',
                         toast: true,
-                        position: 'bottom-end',
+                        position: 'top',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
@@ -75,19 +140,21 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                         text: __('vehicle.created'),
                         icon: 'success',
                         toast: true,
-                        position: 'bottom-end',
+                        position: 'top',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
                     });
                 },
-                onError: () => {
+                onError: (errors) => {
+                    // Server validation errors will be automatically set to the errors object
+                    // Display a general error message
                     Swal.fire({
                         title: 'Error',
                         text: __('vehicle.create.error'),
                         icon: 'error',
                         toast: true,
-                        position: 'bottom-end',
+                        position: 'top',
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
@@ -103,8 +170,8 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
             text: __('vehicle.delete.confirm'),
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonText: __('vehicle.delete.confirm'),
-            cancelButtonText: __('vehicle.delete.cancel'),
+            confirmButtonText: __('vehicle.delete.confirm.btn'),
+            cancelButtonText: __('vehicle.delete.cancel.btn'),
         }).then((result) => {
             if (result.isConfirmed) {
                 router.delete(route('api.vehiculos.destroy', id), {
@@ -114,7 +181,7 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                             text: __('vehicle.deleted'),
                             icon: 'success',
                             toast: true,
-                            position: 'bottom-end',
+                            position: 'top',
                             showConfirmButton: false,
                             timer: 3000,
                             timerProgressBar: true,
@@ -126,7 +193,7 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                             text: __('vehicle.delete.error'),
                             icon: 'error',
                             toast: true,
-                            position: 'bottom-end',
+                            position: 'top',
                             showConfirmButton: false,
                             timer: 3000,
                             timerProgressBar: true,
@@ -163,6 +230,8 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
             kilometraje: '',
             cliente_id: '',
         });
+        setClientErrors({});
+        clearErrors();
     };
 
     return (
@@ -179,7 +248,9 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                             placeholder={__('brand')}
                             value={data.marca}
                             onChange={(e) => setData('marca', e.target.value)}
-                            className="rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+                            className={`rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 ${
+                                errors.marca ? 'border-red-500' : ''
+                            }`}
                             required
                         />
                         {errors.marca && (
@@ -194,7 +265,9 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                             placeholder={__('model')}
                             value={data.modelo}
                             onChange={(e) => setData('modelo', e.target.value)}
-                            className="rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+                            className={`rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 ${
+                                errors.modelo ? 'border-red-500' : ''
+                            }`}
                             required
                         />
                         {errors.modelo && (
@@ -209,7 +282,9 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                             placeholder={__('color')}
                             value={data.color}
                             onChange={(e) => setData('color', e.target.value)}
-                            className="rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+                            className={`rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 ${
+                                errors.color ? 'border-red-500' : ''
+                            }`}
                             required
                         />
                         {errors.color && (
@@ -224,7 +299,9 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                             placeholder={__('plate')}
                             value={data.placa}
                             onChange={(e) => setData('placa', e.target.value)}
-                            className="rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+                            className={`rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 ${
+                                errors.placa ? 'border-red-500' : ''
+                            }`}
                             required
                         />
                         {errors.placa && (
@@ -239,7 +316,9 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                             placeholder={__('year')}
                             value={data.anio}
                             onChange={(e) => setData('anio', e.target.value)}
-                            className="rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+                            className={`rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 ${
+                                errors.anio ? 'border-red-500' : ''
+                            }`}
                             required
                         />
                         {errors.anio && (
@@ -251,12 +330,14 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                     <div>
                         <input
                             type="number"
-                            placeholder={__('kilometers')}
+                            placeholder={__('kilometraje')}
                             value={data.kilometraje}
                             onChange={(e) =>
                                 setData('kilometraje', e.target.value)
                             }
-                            className="rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+                            className={`rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 ${
+                                errors.kilometraje ? 'border-red-500' : ''
+                            }`}
                             required
                         />
                         {errors.kilometraje && (
@@ -271,13 +352,18 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                             onChange={(e) =>
                                 setData('cliente_id', e.target.value)
                             }
-                            className="w-100 rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+                            className={`rounded border p-2 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 ${
+                                errors.cliente_id ? 'border-red-500' : ''
+                            }`}
                             required
                         >
                             <option value="">{__('select_client')}</option>
                             {clientes.map((cliente) => (
-                                <option key={cliente.id} value={cliente.id}>
-                                    {cliente.nombre} - {cliente.dni}
+                                <option
+                                    key={cliente.id}
+                                    value={cliente.id.toString()}
+                                >
+                                    {cliente.nombre}
                                 </option>
                             ))}
                         </select>

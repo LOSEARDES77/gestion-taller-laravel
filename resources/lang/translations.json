@@ -538,5 +538,68 @@
         "fr": "Actions",
         "de": "Aktionen",
         "pt": "Ações"
+    },
+    "client.validation.errors": {
+        "es": "Por favor, corrija los errores en el formulario",
+        "en": "Please correct the errors in the form",
+        "fr": "Veuillez corriger les erreurs dans le formulaire",
+        "de": "Bitte korrigieren Sie die Fehler im Formular",
+        "pt": "Por favor, corrija os erros no formulário"
+    },
+    "client.validation.nombre.min": {
+        "es": "El nombre debe tener al menos 3 caracteres",
+        "en": "Name must be at least 3 characters long",
+        "fr": "Le nom doit comporter au moins 3 caractères",
+        "de": "Der Name muss mindestens 3 Zeichen lang sein",
+        "pt": "O nome deve ter pelo menos 3 caracteres"
+    },
+    "client.validation.email.format": {
+        "es": "El formato del correo electrónico no es válido",
+        "en": "Email format is not valid",
+        "fr": "Le format de l'email n'est pas valide",
+        "de": "E-Mail-Format ist ungültig",
+        "pt": "O formato do email não é válido"
+    },
+    "client.validation.telefono.format": {
+        "es": "El teléfono debe tener 9 dígitos",
+        "en": "Phone number must be 9 digits",
+        "fr": "Le numéro de téléphone doit comporter 9 chiffres",
+        "de": "Die Telefonnummer muss 9 Ziffern haben",
+        "pt": "O número de telefone deve ter 9 dígitos"
+    },
+    "client.validation.dni.format": {
+        "es": "El DNI debe tener 8 dígitos seguidos de una letra",
+        "en": "DNI must have 8 digits followed by a letter",
+        "fr": "Le DNI doit comporter 8 chiffres suivis d'une lettre",
+        "de": "DNI muss 8 Ziffern gefolgt von einem Buchstaben haben",
+        "pt": "O DNI deve ter 8 dígitos seguidos de uma letra"
+    },
+    "client.validation.dni.letter": {
+        "es": "La letra del DNI no es válida para el número proporcionado",
+        "en": "The DNI letter is not valid for the given number",
+        "fr": "La lettre du DNI n'est pas valide pour le numéro fourni",
+        "de": "Der DNI-Buchstabe ist für die angegebene Nummer nicht gültig",
+        "pt": "A letra do DNI não é válida para o número fornecido"
+    },
+    "vehicle.validation.errors": {
+        "es": "Por favor, corrija los errores en el formulario",
+        "en": "Please correct the errors in the form",
+        "fr": "Veuillez corriger les erreurs dans le formulaire",
+        "de": "Bitte korrigieren Sie die Fehler im Formular",
+        "pt": "Por favor, corrija os erros no formulário"
+    },
+    "vehicle.validation.kilometraje.positive": {
+        "es": "El kilometraje no puede ser negativo",
+        "en": "Mileage cannot be negative",
+        "fr": "Le kilométrage ne peut pas être négatif",
+        "de": "Die Kilometerleistung kann nicht negativ sein",
+        "pt": "A quilometragem não pode ser negativa"
+    },
+    "vehicle.validation.anio.range": {
+        "es": "El año debe estar entre 1900 y 2025. No puedes tener coches desde antes de que se inventaran y no puedes registrar coches futuros",
+        "en": "Year must be between 1900 and 2025. You cannot have cars from before invention and cannot register future cars",
+        "fr": "L'année doit être comprise entre 1900 et 2025. Vous ne pouvez pas avoir de voitures depuis l'invention et vous ne pouvez pas enregistrer des voitures futures",
+        "de": "Das Jahr muss zwischen 1900 und 2025 liegen. Sie können keine Autos von der Erfindung bis zur Zukunft haben und keine Zukunftskars registrieren",
+        "pt": "O ano deve ser entre 1900 e 2025. Você não pode ter carros de antes de serem inventados e você não pode registrar carros futuros"
     }
 }
