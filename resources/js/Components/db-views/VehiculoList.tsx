@@ -1,3 +1,4 @@
+import { customSwalClasses, swalPos } from '@/Libs/SwalConfig';
 import { __, useTranslation } from '@/Providers/TranslationProvider';
 import { Cliente, Vehiculo } from '@/types/index';
 import { router, useForm } from '@inertiajs/react';
@@ -92,10 +93,11 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                 text: __('vehicle.validation.errors'),
                 icon: 'error',
                 toast: true,
-                position: 'top',
+                position: swalPos,
                 showConfirmButton: false,
                 timer: 3000,
                 timerProgressBar: true,
+                customClass: customSwalClasses,
             });
 
             return;
@@ -110,10 +112,11 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                         text: __('vehicle.updated'),
                         icon: 'success',
                         toast: true,
-                        position: 'top',
+                        position: swalPos,
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
+                        customClass: customSwalClasses,
                     });
                 },
                 onError: (errors) => {
@@ -124,10 +127,11 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                         text: __('vehicle.update.error'),
                         icon: 'error',
                         toast: true,
-                        position: 'top',
+                        position: swalPos,
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
+                        customClass: customSwalClasses,
                     });
                 },
             });
@@ -140,10 +144,11 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                         text: __('vehicle.created'),
                         icon: 'success',
                         toast: true,
-                        position: 'top',
+                        position: swalPos,
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
+                        customClass: customSwalClasses,
                     });
                 },
                 onError: (errors) => {
@@ -154,10 +159,11 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                         text: __('vehicle.create.error'),
                         icon: 'error',
                         toast: true,
-                        position: 'top',
+                        position: swalPos,
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
+                        customClass: customSwalClasses,
                     });
                 },
             });
@@ -172,6 +178,7 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
             showCancelButton: true,
             confirmButtonText: __('vehicle.delete.confirm.btn'),
             cancelButtonText: __('vehicle.delete.cancel.btn'),
+            customClass: customSwalClasses,
         }).then((result) => {
             if (result.isConfirmed) {
                 router.delete(route('api.vehiculos.destroy', id), {
@@ -181,10 +188,11 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                             text: __('vehicle.deleted'),
                             icon: 'success',
                             toast: true,
-                            position: 'top',
+                            position: swalPos,
                             showConfirmButton: false,
                             timer: 3000,
                             timerProgressBar: true,
+                            customClass: customSwalClasses,
                         });
                     },
                     onError: () => {
@@ -193,10 +201,11 @@ const VehiculoList: React.FC<VehiculoListProps> = ({ vehiculos, clientes }) => {
                             text: __('vehicle.delete.error'),
                             icon: 'error',
                             toast: true,
-                            position: 'top',
+                            position: swalPos,
                             showConfirmButton: false,
                             timer: 3000,
                             timerProgressBar: true,
+                            customClass: customSwalClasses,
                         });
                     },
                 });

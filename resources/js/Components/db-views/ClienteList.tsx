@@ -1,3 +1,4 @@
+import { customSwalClasses, swalPos } from '@/Libs/SwalConfig';
 import { __, useTranslation } from '@/Providers/TranslationProvider';
 import { Cliente } from '@/types/index';
 import { router, useForm } from '@inertiajs/react';
@@ -104,10 +105,11 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                 text: __('client.validation.errors'),
                 icon: 'error',
                 toast: true,
-                position: 'top',
+                position: swalPos,
                 showConfirmButton: false,
                 timer: 3000,
                 timerProgressBar: true,
+                customClass: customSwalClasses,
             });
 
             return;
@@ -122,10 +124,11 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                         text: __('client.updated'),
                         icon: 'success',
                         toast: true,
-                        position: 'top',
+                        position: swalPos,
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
+                        customClass: customSwalClasses,
                     });
                 },
                 onError: (errors) => {
@@ -136,10 +139,11 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                         text: __('client.update.error'),
                         icon: 'error',
                         toast: true,
-                        position: 'top',
+                        position: swalPos,
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
+                        customClass: customSwalClasses,
                     });
                 },
             });
@@ -152,10 +156,11 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                         text: __('client.created'),
                         icon: 'success',
                         toast: true,
-                        position: 'top',
+                        position: swalPos,
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
+                        customClass: customSwalClasses,
                     });
                 },
                 onError: (errors) => {
@@ -166,10 +171,11 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                         text: __('client.create.error'),
                         icon: 'error',
                         toast: true,
-                        position: 'top',
+                        position: swalPos,
                         showConfirmButton: false,
                         timer: 3000,
                         timerProgressBar: true,
+                        customClass: customSwalClasses,
                     });
                 },
             });
@@ -184,6 +190,7 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
             showCancelButton: true,
             confirmButtonText: __('client.delete.confirm.btn'),
             cancelButtonText: __('client.delete.cancel.btn'),
+            customClass: customSwalClasses,
         }).then((result) => {
             if (result.isConfirmed) {
                 router.delete(route('api.clientes.destroy', id), {
@@ -193,10 +200,11 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                             text: __('client.deleted'),
                             icon: 'success',
                             toast: true,
-                            position: 'top',
+                            position: swalPos,
                             showConfirmButton: false,
                             timer: 3000,
                             timerProgressBar: true,
+                            customClass: customSwalClasses,
                         });
                     },
                     onError: () => {
@@ -205,10 +213,11 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                             text: __('client.delete.error'),
                             icon: 'error',
                             toast: true,
-                            position: 'top',
+                            position: swalPos,
                             showConfirmButton: false,
                             timer: 3000,
                             timerProgressBar: true,
+                            customClass: customSwalClasses,
                         });
                     },
                 });

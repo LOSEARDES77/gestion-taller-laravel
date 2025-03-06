@@ -1,3 +1,4 @@
+import { customSwalClasses, swalPos } from '@/Libs/SwalConfig';
 import { useTranslation } from '@/Providers/TranslationProvider';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
@@ -36,10 +37,11 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
                 text: 'Failed to change language',
                 icon: 'error',
                 toast: true,
-                position: 'top',
+                position: swalPos,
                 showConfirmButton: false,
                 timer: 3000,
                 timerProgressBar: true,
+                customClass: customSwalClasses,
             });
             console.error('LanguageSwitcher: Error changing language:', error);
         } finally {
