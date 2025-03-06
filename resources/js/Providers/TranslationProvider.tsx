@@ -2,6 +2,7 @@ import LoadingScreen from '@/Components/common/LoadingScreen';
 import {
     getLanguage,
     initTranslations,
+    languages,
     offLanguageChange,
     onLanguageChange,
     setLanguage,
@@ -62,7 +63,7 @@ export function TranslationProvider({ children }: TranslationProviderProps) {
                 const browserLang = navigator.language.split('-')[0];
                 const language =
                     localStorage.getItem('language') ??
-                    (['en', 'es', 'fr', 'de', 'pt'].includes(browserLang)
+                    (languages.map((lang) => lang.value).includes(browserLang)
                         ? browserLang
                         : 'en');
 

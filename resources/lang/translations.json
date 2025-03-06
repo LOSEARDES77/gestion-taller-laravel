@@ -4,70 +4,130 @@
         "en": "Welcome",
         "fr": "Bienvenue",
         "de": "Willkommen",
-        "pt": "Bem-vindo"
+        "pt": "Bem-vindo",
+        "it": "Benvenuto",
+        "nl": "Welkom",
+        "pl": "Witamy",
+        "ru": "Добро пожаловать",
+        "tr": "Hoş geldiniz",
+        "cz": "Vítejte"
     },
     "home": {
         "es": "Inicio",
         "en": "Home",
         "fr": "Accueil",
         "de": "Startseite",
-        "pt": "Início"
+        "pt": "Início",
+        "it": "Home",
+        "nl": "Home",
+        "pl": "Strona główna",
+        "ru": "Главная",
+        "tr": "Ana sayfa",
+        "cz": "Domů"
     },
     "clients": {
         "es": "Clientes",
         "en": "Clients",
         "fr": "Clients",
         "de": "Kunden",
-        "pt": "Clientes"
+        "pt": "Clientes",
+        "it": "Clienti",
+        "nl": "Klanten",
+        "pl": "Klienci",
+        "ru": "Клиенты",
+        "tr": "Müşteriler",
+        "cz": "Klienti"
     },
     "vehicles": {
         "es": "Vehículos",
         "en": "Vehicles",
         "fr": "Véhicules",
         "de": "Fahrzeuge",
-        "pt": "Veículos"
+        "pt": "Veículos",
+        "it": "Veicoli",
+        "nl": "Voertuigen",
+        "pl": "Pojazdy",
+        "ru": "Транспортные средства",
+        "tr": "Araçlar",
+        "cz": "Vozidla"
     },
     "vehicle": {
         "es": "Vehículo",
         "en": "Vehicle",
         "fr": "Véhicule",
         "de": "Fahrzeug",
-        "pt": "Veículo"
+        "pt": "Veículo",
+        "it": "Veicolo",
+        "nl": "Voertuig",
+        "pl": "Pojazd",
+        "ru": "Транспортное средство",
+        "tr": "Araç",
+        "cz": "Vozidlo"
     },
     "add": {
         "es": "Añadir",
         "en": "Add",
         "fr": "Ajouter",
         "de": "Hinzufügen",
-        "pt": "Adicionar"
+        "pt": "Adicionar",
+        "it": "Aggiungere",
+        "nl": "Toevoegen",
+        "pl": "Dodaj",
+        "ru": "Добавить",
+        "tr": "Ekle",
+        "cz": "Přidat"
     },
     "create": {
         "es": "Crear",
         "en": "Create",
         "fr": "Créer",
         "de": "Erstellen",
-        "pt": "Criar"
+        "pt": "Criar",
+        "it": "Creare",
+        "nl": "Aanmaken",
+        "pl": "Utwórz",
+        "ru": "Создать",
+        "tr": "Oluştur",
+        "cz": "Vytvořit"
     },
     "edit": {
         "es": "Editar",
         "en": "Edit",
         "fr": "Modifier",
         "de": "Bearbeiten",
-        "pt": "Editar"
+        "pt": "Editar",
+        "it": "Modificare",
+        "nl": "Bewerken",
+        "pl": "Edytuj",
+        "ru": "Редактировать",
+        "tr": "Düzenle",
+        "cz": "Upravit"
     },
     "update": {
         "es": "Actualizar",
         "en": "Update",
         "fr": "Mettre à jour",
         "de": "Aktualisieren",
-        "pt": "Atualizar"
+        "pt": "Atualizar",
+        "it": "Aggiornare",
+        "nl": "Bijwerken",
+        "pl": "Aktualizuj",
+        "ru": "Обновить",
+        "tr": "Güncelle",
+        "cz": "Aktualizovat"
     },
     "delete": {
         "es": "Eliminar",
         "en": "Delete",
         "fr": "Supprimer",
         "de": "Löschen",
-        "pt": "Excluir"
+        "pt": "Excluir",
+        "it": "Eliminare",
+        "nl": "Verwijderen",
+        "pl": "Usuń",
+        "ru": "Удалить",
+        "tr": "Sil",
+        "cz": "Smazat"
     },
 
     "save": {
@@ -75,531 +135,987 @@
         "en": "Save",
         "fr": "Enregistrer",
         "de": "Speichern",
-        "pt": "Salvar"
+        "pt": "Salvar",
+        "it": "Salvare",
+        "nl": "Opslaan",
+        "pl": "Zapisz",
+        "ru": "Сохранить",
+        "tr": "Kaydet",
+        "cz": "Uložit"
     },
     "cancel": {
         "es": "Cancelar",
         "en": "Cancel",
         "fr": "Annuler",
         "de": "Abbrechen",
-        "pt": "Cancelar"
+        "pt": "Cancelar",
+        "it": "Annullare",
+        "nl": "Annuleren",
+        "pl": "Anuluj",
+        "ru": "Отменить",
+        "tr": "İptal",
+        "cz": "Zrušit"
     },
     "search": {
         "es": "Buscar",
         "en": "Search",
         "fr": "Rechercher",
         "de": "Suchen",
-        "pt": "Pesquisar"
+        "pt": "Pesquisar",
+        "it": "Cercare",
+        "nl": "Zoeken",
+        "pl": "Szukaj",
+        "ru": "Поиск",
+        "tr": "Ara",
+        "cz": "Hledat"
     },
     "filter": {
         "es": "Filtrar",
         "en": "Filter",
         "fr": "Filtrer",
         "de": "Filtern",
-        "pt": "Filtrar"
+        "pt": "Filtrar",
+        "it": "Filtrare",
+        "nl": "Filteren",
+        "pl": "Filtruj",
+        "ru": "Фильтр",
+        "tr": "Filtrele",
+        "cz": "Filtrovat"
     },
     "sort": {
         "es": "Ordenar",
         "en": "Sort",
         "fr": "Trier",
         "de": "Sortieren",
-        "pt": "Ordenar"
+        "pt": "Ordenar",
+        "it": "Ordinare",
+        "nl": "Sorteren",
+        "pl": "Sortuj",
+        "ru": "Сортировать",
+        "tr": "Sırala",
+        "cz": "Řadit"
     },
     "view": {
         "es": "Ver",
         "en": "View",
         "fr": "Voir",
         "de": "Ansehen",
-        "pt": "Ver"
+        "pt": "Ver",
+        "it": "Visualizzare",
+        "nl": "Bekijken",
+        "pl": "Widok",
+        "ru": "Просмотр",
+        "tr": "Görüntüle",
+        "cz": "Zobrazit"
     },
     "details": {
         "es": "Detalles",
         "en": "Details",
         "fr": "Détails",
         "de": "Details",
-        "pt": "Detalhes"
+        "pt": "Detalhes",
+        "it": "Dettagli",
+        "nl": "Details",
+        "pl": "Szczegóły",
+        "ru": "Подробности",
+        "tr": "Detaylar",
+        "cz": "Detaily"
     },
     "settings": {
         "es": "Configuración",
         "en": "Settings",
         "fr": "Paramètres",
         "de": "Einstellungen",
-        "pt": "Configurações"
+        "pt": "Configurações",
+        "it": "Impostazioni",
+        "nl": "Instellingen",
+        "pl": "Ustawienia",
+        "ru": "Настройки",
+        "tr": "Ayarlar",
+        "cz": "Nastavení"
     },
     "profile": {
         "es": "Perfil",
         "en": "Profile",
         "fr": "Profil",
         "de": "Profil",
-        "pt": "Perfil"
+        "pt": "Perfil",
+        "it": "Profilo",
+        "nl": "Profiel",
+        "pl": "Profil",
+        "ru": "Профиль",
+        "tr": "Profil",
+        "cz": "Profil"
     },
     "logout": {
         "es": "Cerrar sesión",
         "en": "Logout",
         "fr": "Déconnexion",
         "de": "Abmelden",
-        "pt": "Sair"
+        "pt": "Sair",
+        "it": "Disconnettersi",
+        "nl": "Uitloggen",
+        "pl": "Wyloguj",
+        "ru": "Выход",
+        "tr": "Çıkış",
+        "cz": "Odhlásit se"
     },
     "login": {
         "es": "Iniciar sesión",
         "en": "Login",
         "fr": "Connexion",
         "de": "Anmelden",
-        "pt": "Entrar"
+        "pt": "Entrar",
+        "it": "Accesso",
+        "nl": "Inloggen",
+        "pl": "Zaloguj",
+        "ru": "Вход",
+        "tr": "Giriş",
+        "cz": "Přihlášení"
     },
     "register": {
         "es": "Registrarse",
         "en": "Register",
         "fr": "S'inscrire",
         "de": "Registrieren",
-        "pt": "Registrar"
+        "pt": "Registrar",
+        "it": "Registrarsi",
+        "nl": "Registreren",
+        "pl": "Zarejestruj",
+        "ru": "Регистрация",
+        "tr": "Kayıt ol",
+        "cz": "Registrovat"
     },
     "password": {
         "es": "Contraseña",
         "en": "Password",
         "fr": "Mot de passe",
         "de": "Passwort",
-        "pt": "Senha"
+        "pt": "Senha",
+        "it": "Password",
+        "nl": "Wachtwoord",
+        "pl": "Hasło",
+        "ru": "Пароль",
+        "tr": "Şifre",
+        "cz": "Heslo"
     },
     "confirm": {
         "es": "Confirmar",
         "en": "Confirm",
         "fr": "Confirmer",
         "de": "Bestätigen",
-        "pt": "Confirmar"
+        "pt": "Confirmar",
+        "it": "Confermare",
+        "nl": "Bevestigen",
+        "pl": "Potwierdź",
+        "ru": "Подтвердить",
+        "tr": "Onayla",
+        "cz": "Potvrdit"
     },
     "submit": {
         "es": "Enviar",
         "en": "Submit",
         "fr": "Soumettre",
         "de": "Absenden",
-        "pt": "Enviar"
+        "pt": "Enviar",
+        "it": "Inviare",
+        "nl": "Versturen",
+        "pl": "Wyślij",
+        "ru": "Отправить",
+        "tr": "Gönder",
+        "cz": "Odeslat"
     },
     "reset": {
         "es": "Restablecer",
         "en": "Reset",
         "fr": "Réinitialiser",
         "de": "Zurücksetzen",
-        "pt": "Redefinir"
+        "pt": "Redefinir",
+        "it": "Reimpostare",
+        "nl": "Resetten",
+        "pl": "Resetuj",
+        "ru": "Сброс",
+        "tr": "Sıfırla",
+        "cz": "Resetovat"
     },
     "forgot": {
         "es": "Olvidé",
         "en": "Forgot",
         "fr": "Oublié",
         "de": "Vergessen",
-        "pt": "Esqueci"
+        "pt": "Esqueci",
+        "it": "Dimenticato",
+        "nl": "Vergeten",
+        "pl": "Zapomniałem",
+        "ru": "Забыл",
+        "tr": "Unuttum",
+        "cz": "Zapomněl jsem"
     },
     "remember": {
         "es": "Recordar",
         "en": "Remember",
         "fr": "Se souvenir",
         "de": "Merken",
-        "pt": "Lembrar"
+        "pt": "Lembrar",
+        "it": "Ricordare",
+        "nl": "Onthouden",
+        "pl": "Zapamiętaj",
+        "ru": "Запомнить",
+        "tr": "Hatırla",
+        "cz": "Zapamatovat"
     },
     "or": {
         "es": "O",
         "en": "Or",
         "fr": "Ou",
         "de": "Oder",
-        "pt": "Ou"
+        "pt": "Ou",
+        "it": "O",
+        "nl": "Of",
+        "pl": "Lub",
+        "ru": "Или",
+        "tr": "Veya",
+        "cz": "Nebo"
     },
     "and": {
         "es": "Y",
         "en": "And",
         "fr": "Et",
         "de": "Und",
-        "pt": "E"
+        "pt": "E",
+        "it": "E",
+        "nl": "En",
+        "pl": "I",
+        "ru": "И",
+        "tr": "Ve",
+        "cz": "A"
     },
     "yes": {
         "es": "Sí",
         "en": "Yes",
         "fr": "Oui",
         "de": "Ja",
-        "pt": "Sim"
+        "pt": "Sim",
+        "it": "Sì",
+        "nl": "Ja",
+        "pl": "Tak",
+        "ru": "Да",
+        "tr": "Evet",
+        "cz": "Ano"
     },
     "no": {
         "es": "No",
         "en": "No",
         "fr": "Non",
         "de": "Nein",
-        "pt": "Não"
+        "pt": "Não",
+        "it": "No",
+        "nl": "Nee",
+        "pl": "Nie",
+        "ru": "Нет",
+        "tr": "Hayır",
+        "cz": "Ne"
     },
     "ok": {
         "es": "OK",
         "en": "OK",
         "fr": "OK",
         "de": "OK",
-        "pt": "OK"
+        "pt": "OK",
+        "it": "OK",
+        "nl": "OK",
+        "pl": "OK",
+        "ru": "OK",
+        "tr": "Tamam",
+        "cz": "OK"
     },
     "close": {
         "es": "Cerrar",
         "en": "Close",
         "fr": "Fermer",
         "de": "Schließen",
-        "pt": "Fechar"
+        "pt": "Fechar",
+        "it": "Chiudere",
+        "nl": "Sluiten",
+        "pl": "Zamknij",
+        "ru": "Закрыть",
+        "tr": "Kapat",
+        "cz": "Zavřít"
     },
     "back": {
         "es": "Atrás",
         "en": "Back",
         "fr": "Retour",
         "de": "Zurück",
-        "pt": "Voltar"
+        "pt": "Voltar",
+        "it": "Indietro",
+        "nl": "Terug",
+        "pl": "Wstecz",
+        "ru": "Назад",
+        "tr": "Geri",
+        "cz": "Zpět"
     },
     "next": {
         "es": "Siguiente",
         "en": "Next",
         "fr": "Suivant",
         "de": "Weiter",
-        "pt": "Próximo"
+        "pt": "Próximo",
+        "it": "Successivo",
+        "nl": "Volgende",
+        "pl": "Następny",
+        "ru": "Следующий",
+        "tr": "Sonraki",
+        "cz": "Další"
     },
     "previous": {
         "es": "Anterior",
         "en": "Previous",
         "fr": "Précédent",
         "de": "Vorherige",
-        "pt": "Anterior"
+        "pt": "Anterior",
+        "it": "Precedente",
+        "nl": "Vorige",
+        "pl": "Poprzedni",
+        "ru": "Предыдущий",
+        "tr": "Önceki",
+        "cz": "Předchozí"
     },
     "home.welcome": {
         "es": "Esta pagina es un ejemplo del poder de  Laravel para Manejar una base de datos simple. Puedes crear, ver, editar y eliminar clientes. Todo desde una simple interfaz. Este ejemplo usa una Base de datos de un taller en el que guardamos Clientes y Vehículos. Y cada Vehículo esta asignado a un Cliente.",
         "en": "This page is an example of the power of  Laravel to manage a simple database. You can create, view, edit and delete clients. All from a simple interface. This example uses a workshop database in which we store Clients and Vehicles. And each Vehicle is assigned to a Client.",
         "fr": "Cette page est un exemple de la puissance de Laravel pour gérer une base de données simple. Vous pouvez créer, afficher, modifier et supprimer des clients. Le tout depuis une interface simple. Cet exemple utilise une base de données d'atelier dans laquelle nous stockons des clients et des véhicules. Et chaque véhicule est attribué à un client.",
         "de": "Diese Seite ist ein Beispiel für die Leistungsfähigkeit von Laravel zur Verwaltung einer einfachen Datenbank. Sie können Kunden erstellen, anzeigen, bearbeiten und löschen. Alles über eine einfache Oberfläche. Dieses Beispiel verwendet eine Werkstattdatenbank, in der wir Kunden und Fahrzeuge speichern. Und jedes Fahrzeug ist einem Kunden zugeordnet.",
-        "pt": "Esta página é um exemplo do poder do Laravel para gerenciar um banco de dados simples. Você pode criar, visualizar, editar e excluir clientes. Tudo a partir de uma interface simples. Este exemplo usa um banco de dados de oficina no qual armazenamos Clientes e Veículos. E cada Veículo é atribuído a um Cliente."
+        "pt": "Esta página é um exemplo do poder do Laravel para gerenciar um banco de dados simples. Você pode criar, visualizar, editar e excluir clientes. Tudo a partir de uma interface simples. Este exemplo usa um banco de dados de oficina no qual armazenamos Clientes e Veículos. E cada Veículo é atribuído a um Cliente.",
+        "it": "Questa pagina è un esempio della potenza di Laravel per gestire un database semplice. Puoi creare, visualizzare, modificare ed eliminare clienti. Tutto da un'interfaccia semplice. Questo esempio utilizza un database di officina in cui memorizziamo Clienti e Veicoli. E ogni Veicolo è assegnato a un Cliente.",
+        "nl": "Deze pagina is een voorbeeld van de kracht van Laravel om een eenvoudige database te beheren. Je kunt klanten aanmaken, bekijken, bewerken en verwijderen. Allemaal vanuit een eenvoudige interface. Dit voorbeeld gebruikt een werkplaatsdatabase waarin we Klanten en Voertuigen opslaan. En elk Voertuig is toegewezen aan een Klant.",
+        "pl": "Ta strona jest przykładem mocy Laravel do zarządzania prostą bazą danych. Możesz tworzyć, przeglądać, edytować i usuwać klientów. Wszystko z prostego interfejsu. Ten przykład wykorzystuje bazę danych warsztatu, w której przechowujemy Klientów i Pojazdy. Każdy Pojazd jest przypisany do Klienta.",
+        "ru": "Эта страница является примером мощности Laravel для управления простой базой данных. Вы можете создавать, просматривать, редактировать и удалять клиентов. Всё из простого интерфейса. В этом примере используется база данных автомастерской, в которой мы храним Клиентов и Транспортные средства. И каждое Транспортное средство присвоено Клиенту.",
+        "tr": "Bu sayfa, Laravel'in basit bir veritabanını yönetme gücünün bir örneğidir. Müşterileri oluşturabilir, görüntüleyebilir, düzenleyebilir ve silebilirsiniz. Hepsi basit bir arayüzden. Bu örnek, Müşteriler ve Araçları depoladığımız bir atölye veritabanı kullanır. Ve her Araç bir Müşteriye atanmıştır.",
+        "cz": "Tato stránka je příkladem síly Laravel pro správu jednoduché databáze. Můžete vytvářet, zobrazovat, upravovat a mazat klienty. Vše z jednoduchého rozhraní. Tento příklad používá databázi dílny, ve které uchováváme Klienty a Vozidla. A každé Vozidlo je přiřazeno ke Klientovi."
     },
     "vehicles.title": {
         "es": "Vehículos",
         "en": "Vehicles",
         "fr": "Véhicules",
         "de": "Fahrzeuge",
-        "pt": "Veículos"
+        "pt": "Veículos",
+        "it": "Veicoli",
+        "nl": "Voertuigen",
+        "pl": "Pojazdy",
+        "ru": "Транспортные средства",
+        "tr": "Araçlar",
+        "cz": "Vozidla"
     },
     "vehicles.management": {
         "es": "Gestion de Vehículos",
         "en": "Vehicles management",
         "fr": "Gestion des véhicules",
         "de": "Fahrzeugverwaltung",
-        "pt": "Gestão de veículos"
+        "pt": "Gestão de veículos",
+        "it": "Gestione dei veicoli",
+        "nl": "Voertuigbeheer",
+        "pl": "Zarządzanie pojazdami",
+        "ru": "Управление транспортными средствами",
+        "tr": "Araç yönetimi",
+        "cz": "Správa vozidel"
     },
     "vehicle.updated": {
         "es": "Vehículo actualizado correctamente",
         "en": "Vehicle updated successfully",
         "fr": "Véhicule mis à jour avec succès",
         "de": "Fahrzeug erfolgreich aktualisiert",
-        "pt": "Veículo atualizado com sucesso"
+        "pt": "Veículo atualizado com sucesso",
+        "it": "Veicolo aggiornato con successo",
+        "nl": "Voertuig succesvol bijgewerkt",
+        "pl": "Pojazd zaktualizowany pomyślnie",
+        "ru": "Транспортное средство успешно обновлено",
+        "tr": "Araç başarıyla güncellendi",
+        "cz": "Vozidlo úspěšně aktualizováno"
     },
     "vehicle.update.error": {
         "es": "Hubo un problema al actualizar el vehículo",
         "en": "There was an error updating the vehicle",
         "fr": "Une erreur s'est produite lors de la mise à jour du véhicule",
         "de": "Beim Aktualisieren des Fahrzeugs ist ein Fehler aufgetreten",
-        "pt": "Ocorreu um erro ao atualizar o veículo"
+        "pt": "Ocorreu um erro ao atualizar o veículo",
+        "it": "Si è verificato un errore durante l'aggiornamento del veicolo",
+        "nl": "Er is een fout opgetreden bij het bijwerken van het voertuig",
+        "pl": "Wystąpił błąd podczas aktualizacji pojazdu",
+        "ru": "При обновлении транспортного средства произошла ошибка",
+        "tr": "Araç güncellenirken bir hata oluştu",
+        "cz": "Při aktualizaci vozidla došlo k chybě"
     },
     "vehicle.create.error": {
         "es": "Hubo un problema al crear el vehículo",
         "en": "There was an error creating the vehicle",
         "fr": "Une erreur s'est produite lors de la création du véhicule",
         "de": "Beim Erstellen des Fahrzeugs ist ein Fehler aufgetreten",
-        "pt": "Ocorreu um erro ao criar o veículo"
+        "pt": "Ocorreu um erro ao criar o veículo",
+        "it": "Si è verificato un errore durante la creazione del veicolo",
+        "nl": "Er is een fout opgetreden bij het aanmaken van het voertuig",
+        "pl": "Wystąpił błąd podczas tworzenia pojazdu",
+        "ru": "При создании транспортного средства произошла ошибка",
+        "tr": "Araç oluşturulurken bir hata oluştu",
+        "cz": "Při vytváření vozidla došlo k chybě"
     },
     "vehicle.delete.title": {
         "es": "¿Está seguro?",
         "en": "Are you sure?",
         "fr": "Êtes-vous sûr?",
         "de": "Sind Sie sicher?",
-        "pt": "Tem certeza?"
+        "pt": "Tem certeza?",
+        "it": "Sei sicuro?",
+        "nl": "Weet je het zeker?",
+        "pl": "Czy jesteś pewien?",
+        "ru": "Вы уверены?",
+        "tr": "Emin misiniz?",
+        "cz": "Jste si jisti?"
     },
     "vehicle.delete.confirm": {
         "es": "¿Desea eliminar este vehículo?",
         "en": "Do you want to delete this vehicle?",
         "fr": "Voulez-vous supprimer ce véhicule?",
         "de": "Möchten Sie dieses Fahrzeug löschen?",
-        "pt": "Deseja excluir este veículo?"
+        "pt": "Deseja excluir este veículo?",
+        "it": "Vuoi eliminare questo veicolo?",
+        "nl": "Wil je dit voertuig verwijderen?",
+        "pl": "Czy chcesz usunąć ten pojazd?",
+        "ru": "Вы хотите удалить это транспортное средство?",
+        "tr": "Bu aracı silmek istiyor musunuz?",
+        "cz": "Chcete smazat toto vozidlo?"
     },
     "vehicle.delete.confirm.btn": {
         "es": "Sí, eliminar",
         "en": "Yes, delete it",
         "fr": "Oui, supprimer",
         "de": "Ja, löschen",
-        "pt": "Sim, excluir"
+        "pt": "Sim, excluir",
+        "it": "Sì, eliminalo",
+        "nl": "Ja, verwijder het",
+        "pl": "Tak, usuń to",
+        "ru": "Да, удалить",
+        "tr": "Evet, sil",
+        "cz": "Ano, smazat"
     },
     "vehicle.delete.cancel.btn": {
         "es": "Cancelar",
         "en": "Cancel",
         "fr": "Annuler",
         "de": "Abbrechen",
-        "pt": "Cancelar"
+        "pt": "Cancelar",
+        "it": "Annulla",
+        "nl": "Annuleren",
+        "pl": "Anuluj",
+        "ru": "Отмена",
+        "tr": "İptal",
+        "cz": "Zrušit"
     },
     "vehicle.deleted": {
         "es": "Vehículo eliminado correctamente",
         "en": "Vehicle deleted successfully",
         "fr": "Véhicule supprimé avec succès",
         "de": "Fahrzeug erfolgreich gelöscht",
-        "pt": "Veículo excluído com sucesso"
+        "pt": "Veículo excluído com sucesso",
+        "it": "Veicolo eliminato con successo",
+        "nl": "Voertuig succesvol verwijderd",
+        "pl": "Pojazd usunięty pomyślnie",
+        "ru": "Транспортное средство успешно удалено",
+        "tr": "Araç başarıyla silindi",
+        "cz": "Vozidlo úspěšně smazáno"
     },
     "vehicle.delete.error": {
         "es": "Hubo un problema al eliminar el vehículo",
         "en": "There was an error deleting the vehicle",
         "fr": "Une erreur s'est produite lors de la suppression du véhicule",
         "de": "Beim Löschen des Fahrzeugs ist ein Fehler aufgetreten",
-        "pt": "Ocorreu um erro ao excluir o veículo"
+        "pt": "Ocorreu um erro ao excluir o veículo",
+        "it": "Si è verificato un errore durante l'eliminazione del veicolo",
+        "nl": "Er is een fout opgetreden bij het verwijderen van het voertuig",
+        "pl": "Wystąpił błąd podczas usuwania pojazdu",
+        "ru": "При удалении транспортного средства произошла ошибка",
+        "tr": "Araç silinirken bir hata oluştu",
+        "cz": "Při mazání vozidla došlo k chybě"
     },
     "brand": {
         "es": "Marca",
         "en": "Brand",
         "fr": "Marque",
         "de": "Marke",
-        "pt": "Marca"
+        "pt": "Marca",
+        "it": "Marca",
+        "nl": "Merk",
+        "pl": "Marka",
+        "ru": "Марка",
+        "tr": "Marka",
+        "cz": "Značka"
     },
     "model": {
         "es": "Modelo",
         "en": "Model",
         "fr": "Modèle",
         "de": "Modell",
-        "pt": "Modelo"
+        "pt": "Modelo",
+        "it": "Modello",
+        "nl": "Model",
+        "pl": "Model",
+        "ru": "Модель",
+        "tr": "Model",
+        "cz": "Model"
     },
     "color": {
         "es": "Color",
         "en": "Color",
         "fr": "Couleur",
         "de": "Farbe",
-        "pt": "Cor"
+        "pt": "Cor",
+        "it": "Colore",
+        "nl": "Kleur",
+        "pl": "Kolor",
+        "ru": "Цвет",
+        "tr": "Renk",
+        "cz": "Barva"
     },
     "plate": {
         "es": "Placa",
         "en": "Plate",
         "fr": "Plaque",
         "de": "Kennzeichen",
-        "pt": "Placa"
+        "pt": "Placa",
+        "it": "Targa",
+        "nl": "Kenteken",
+        "pl": "Rejestracja",
+        "ru": "Номер",
+        "tr": "Plaka",
+        "cz": "SPZ"
     },
     "year": {
         "es": "Año",
         "en": "Year",
         "fr": "Année",
         "de": "Jahr",
-        "pt": "Ano"
+        "pt": "Ano",
+        "it": "Anno",
+        "nl": "Jaar",
+        "pl": "Rok",
+        "ru": "Год",
+        "tr": "Yıl",
+        "cz": "Rok"
     },
     "kilometers": {
         "es": "Kilometraje",
         "en": "Kilometers",
         "fr": "Kilométrage",
         "de": "Kilometerstand",
-        "pt": "Quilometragem"
+        "pt": "Quilometragem",
+        "it": "Chilometraggio",
+        "nl": "Kilometers",
+        "pl": "Przebieg",
+        "ru": "Пробег",
+        "tr": "Kilometre",
+        "cz": "Kilometry"
     },
     "customer": {
         "es": "Cliente",
         "en": "Customer",
         "fr": "Client",
         "de": "Kunde",
-        "pt": "Cliente"
+        "pt": "Cliente",
+        "it": "Cliente",
+        "nl": "Klant",
+        "pl": "Klient",
+        "ru": "Клиент",
+        "tr": "Müşteri",
+        "cz": "Zákazník"
     },
     "select_client": {
         "es": "Seleccionar Cliente",
         "en": "Select client",
         "fr": "Sélectionner un client",
         "de": "Kunde auswählen",
-        "pt": "Selecionar cliente"
+        "pt": "Selecionar cliente",
+        "it": "Seleziona cliente",
+        "nl": "Selecteer klant",
+        "pl": "Wybierz klienta",
+        "ru": "Выберите клиента",
+        "tr": "Müşteri seç",
+        "cz": "Vybrat zákazníka"
     },
     "client": {
         "es": "Cliente",
         "en": "Client",
         "fr": "Client",
         "de": "Kunde",
-        "pt": "Cliente"
+        "pt": "Cliente",
+        "it": "Cliente",
+        "nl": "Klant",
+        "pl": "Klient",
+        "ru": "Клиент",
+        "tr": "Müşteri",
+        "cz": "Klient"
     },
     "clients.title": {
         "es": "Clientes",
         "en": "Clients",
         "fr": "Clients",
         "de": "Kunden",
-        "pt": "Clientes"
+        "pt": "Clientes",
+        "it": "Clienti",
+        "nl": "Klanten",
+        "pl": "Klienci",
+        "ru": "Клиенты",
+        "tr": "Müşteriler",
+        "cz": "Klienti"
     },
     "clients.management": {
         "es": "Gestión de Clientes",
         "en": "Client Management",
         "fr": "Gestion des clients",
         "de": "Kundenverwaltung",
-        "pt": "Gestão de clientes"
+        "pt": "Gestão de clientes",
+        "it": "Gestione dei clienti",
+        "nl": "Klantenbeheer",
+        "pl": "Zarządzanie klientami",
+        "ru": "Управление клиентами",
+        "tr": "Müşteri yönetimi",
+        "cz": "Správa klientů"
     },
     "client.updated": {
         "es": "Cliente actualizado correctamente",
         "en": "Client updated successfully",
         "fr": "Client mis à jour avec succès",
         "de": "Kunde erfolgreich aktualisiert",
-        "pt": "Cliente atualizado com sucesso"
+        "pt": "Cliente atualizado com sucesso",
+        "it": "Cliente aggiornato con successo",
+        "nl": "Klant succesvol bijgewerkt",
+        "pl": "Klient zaktualizowany pomyślnie",
+        "ru": "Клиент успешно обновлен",
+        "tr": "Müşteri başarıyla güncellendi",
+        "cz": "Klient úspěšně aktualizován"
     },
     "client.update.error": {
         "es": "Hubo un problema al actualizar el cliente",
         "en": "There was an error updating the client",
         "fr": "Une erreur s'est produite lors de la mise à jour du client",
         "de": "Beim Aktualisieren des Kunden ist ein Fehler aufgetreten",
-        "pt": "Ocorreu um erro ao atualizar o cliente"
+        "pt": "Ocorreu um erro ao atualizar o cliente",
+        "it": "Si è verificato un errore durante l'aggiornamento del cliente",
+        "nl": "Er is een fout opgetreden bij het bijwerken van de klant",
+        "pl": "Wystąpił błąd podczas aktualizacji klienta",
+        "ru": "При обновлении клиента произошла ошибка",
+        "tr": "Müşteri güncellenirken bir hata oluştu",
+        "cz": "Při aktualizaci klienta došlo k chybě"
     },
     "client.created": {
         "es": "Cliente creado correctamente",
         "en": "Client created successfully",
         "fr": "Client créé avec succès",
         "de": "Kunde erfolgreich erstellt",
-        "pt": "Cliente criado com sucesso"
+        "pt": "Cliente criado com sucesso",
+        "it": "Cliente creato con successo",
+        "nl": "Klant succesvol aangemaakt",
+        "pl": "Klient utworzony pomyślnie",
+        "ru": "Клиент успешно создан",
+        "tr": "Müşteri başarıyla oluşturuldu",
+        "cz": "Klient úspěšně vytvořen"
     },
     "client.create.error": {
         "es": "Hubo un problema al crear el cliente",
         "en": "There was an error creating the client",
         "fr": "Une erreur s'est produite lors de la création du client",
         "de": "Beim Erstellen des Kunden ist ein Fehler aufgetreten",
-        "pt": "Ocorreu um erro ao criar o cliente"
+        "pt": "Ocorreu um erro ao criar o cliente",
+        "it": "Si è verificato un errore durante la creazione del cliente",
+        "nl": "Er is een fout opgetreden bij het aanmaken van de klant",
+        "pl": "Wystąpił błąd podczas tworzenia klienta",
+        "ru": "При создании клиента произошла ошибка",
+        "tr": "Müşteri oluşturulurken bir hata oluştu",
+        "cz": "Při vytváření klienta došlo k chybě"
     },
     "client.delete.title": {
         "es": "¿Está seguro?",
         "en": "Are you sure?",
         "fr": "Êtes-vous sûr?",
         "de": "Sind Sie sicher?",
-        "pt": "Tem certeza?"
+        "pt": "Tem certeza?",
+        "it": "Sei sicuro?",
+        "nl": "Weet je het zeker?",
+        "pl": "Czy jesteś pewien?",
+        "ru": "Вы уверены?",
+        "tr": "Emin misiniz?",
+        "cz": "Jste si jisti?"
     },
     "client.delete.confirm": {
         "es": "¿Desea eliminar este cliente?",
         "en": "Do you want to delete this client?",
         "fr": "Voulez-vous supprimer ce client?",
         "de": "Möchten Sie diesen Kunden löschen?",
-        "pt": "Deseja excluir este cliente?"
+        "pt": "Deseja excluir este cliente?",
+        "it": "Vuoi eliminare questo cliente?",
+        "nl": "Wil je deze klant verwijderen?",
+        "pl": "Czy chcesz usunąć tego klienta?",
+        "ru": "Вы хотите удалить этого клиента?",
+        "tr": "Bu müşteriyi silmek istiyor musunuz?",
+        "cz": "Chcete smazat tohoto klienta?"
     },
     "client.delete.confirm.btn": {
         "es": "Sí, eliminar",
         "en": "Yes, delete it",
         "fr": "Oui, supprimer",
         "de": "Ja, löschen",
-        "pt": "Sim, excluir"
+        "pt": "Sim, excluir",
+        "it": "Sì, eliminalo",
+        "nl": "Ja, verwijder het",
+        "pl": "Tak, usuń to",
+        "ru": "Да, удалить",
+        "tr": "Evet, sil",
+        "cz": "Ano, smazat"
     },
     "client.delete.cancel.btn": {
         "es": "Cancelar",
         "en": "Cancel",
         "fr": "Annuler",
         "de": "Abbrechen",
-        "pt": "Cancelar"
+        "pt": "Cancelar",
+        "it": "Annulla",
+        "nl": "Annuleren",
+        "pl": "Anuluj",
+        "ru": "Отмена",
+        "tr": "İptal",
+        "cz": "Zrušit"
     },
     "client.deleted": {
         "es": "Cliente eliminado correctamente",
         "en": "Client deleted successfully",
         "fr": "Client supprimé avec succès",
         "de": "Kunde erfolgreich gelöscht",
-        "pt": "Cliente excluído com sucesso"
+        "pt": "Cliente excluído com sucesso",
+        "it": "Cliente eliminato con successo",
+        "nl": "Klant succesvol verwijderd",
+        "pl": "Klient usunięty pomyślnie",
+        "ru": "Клиент успешно удален",
+        "tr": "Müşteri başarıyla silindi",
+        "cz": "Klient úspěšně smazán"
     },
     "client.delete.error": {
         "es": "Hubo un problema al eliminar el cliente",
         "en": "There was an error deleting the client",
         "fr": "Une erreur s'est produite lors de la suppression du client",
         "de": "Beim Löschen des Kunden ist ein Fehler aufgetreten",
-        "pt": "Ocorreu um erro ao excluir o cliente"
+        "pt": "Ocorreu um erro ao excluir o cliente",
+        "it": "Si è verificato un errore durante l'eliminazione del cliente",
+        "nl": "Er is een fout opgetreden bij het verwijderen van de klant",
+        "pl": "Wystąpił błąd podczas usuwania klienta",
+        "ru": "При удалении клиента произошла ошибка",
+        "tr": "Müşteri silinirken bir hata oluştu",
+        "cz": "Při mazání klienta došlo k chybě"
     },
     "dni": {
         "es": "DNI",
         "en": "ID",
         "fr": "Pièce d'identité",
         "de": "Ausweis",
-        "pt": "CPF"
+        "pt": "CPF",
+        "it": "Carta d'identità",
+        "nl": "ID",
+        "pl": "Dowód osobisty",
+        "ru": "Удостоверение личности",
+        "tr": "Kimlik",
+        "cz": "Občanský průkaz"
     },
     "success": {
         "es": "Éxito",
         "en": "Success",
         "fr": "Succès",
         "de": "Erfolg",
-        "pt": "Sucesso"
+        "pt": "Sucesso",
+        "it": "Successo",
+        "nl": "Succes",
+        "pl": "Sukces",
+        "ru": "Успех",
+        "tr": "Başarı",
+        "cz": "Úspěch"
     },
     "error": {
         "es": "Error",
         "en": "Error",
         "fr": "Erreur",
         "de": "Fehler",
-        "pt": "Erro"
+        "pt": "Erro",
+        "it": "Errore",
+        "nl": "Fout",
+        "pl": "Błąd",
+        "ru": "Ошибка",
+        "tr": "Hata",
+        "cz": "Chyba"
     },
     "name": {
         "es": "Nombre",
         "en": "Name",
         "fr": "Nom",
         "de": "Name",
-        "pt": "Nome"
+        "pt": "Nome",
+        "it": "Nome",
+        "nl": "Naam",
+        "pl": "Nazwa",
+        "ru": "Имя",
+        "tr": "Ad",
+        "cz": "Jméno"
     },
     "email": {
         "es": "Correo electrónico",
         "en": "Email",
         "fr": "Email",
         "de": "E-Mail",
-        "pt": "Email"
+        "pt": "Email",
+        "it": "Email",
+        "nl": "E-mail",
+        "pl": "E-mail",
+        "ru": "Электронная почта",
+        "tr": "E-posta",
+        "cz": "E-mail"
     },
     "phone": {
         "es": "Teléfono",
         "en": "Phone",
         "fr": "Téléphone",
         "de": "Telefon",
-        "pt": "Telefone"
+        "pt": "Telefone",
+        "it": "Telefono",
+        "nl": "Telefoon",
+        "pl": "Telefon",
+        "ru": "Телефон",
+        "tr": "Telefon",
+        "cz": "Telefon"
     },
     "actions": {
         "es": "Acciones",
         "en": "Actions",
         "fr": "Actions",
         "de": "Aktionen",
-        "pt": "Ações"
+        "pt": "Ações",
+        "it": "Azioni",
+        "nl": "Acties",
+        "pl": "Akcje",
+        "ru": "Действия",
+        "tr": "İşlemler",
+        "cz": "Akce"
     },
     "client.validation.errors": {
         "es": "Por favor, corrija los errores en el formulario",
         "en": "Please correct the errors in the form",
         "fr": "Veuillez corriger les erreurs dans le formulaire",
         "de": "Bitte korrigieren Sie die Fehler im Formular",
-        "pt": "Por favor, corrija os erros no formulário"
+        "pt": "Por favor, corrija os erros no formulário",
+        "it": "Si prega di correggere gli errori nel modulo",
+        "nl": "Corrigeer de fouten in het formulier",
+        "pl": "Proszę poprawić błędy w formularzu",
+        "ru": "Пожалуйста, исправьте ошибки в форме",
+        "tr": "Lütfen formdaki hataları düzeltin",
+        "cz": "Opravte prosím chyby ve formuláři"
     },
     "client.validation.nombre.min": {
         "es": "El nombre debe tener al menos 3 caracteres",
         "en": "Name must be at least 3 characters long",
         "fr": "Le nom doit comporter au moins 3 caractères",
         "de": "Der Name muss mindestens 3 Zeichen lang sein",
-        "pt": "O nome deve ter pelo menos 3 caracteres"
+        "pt": "O nome deve ter pelo menos 3 caracteres",
+        "it": "Il nome deve contenere almeno 3 caratteri",
+        "nl": "Naam moet minimaal 3 tekens lang zijn",
+        "pl": "Nazwa musi mieć co najmniej 3 znaki",
+        "ru": "Имя должно содержать не менее 3 символов",
+        "tr": "Ad en az 3 karakter uzunluğunda olmalıdır",
+        "cz": "Jméno musí mít alespoň 3 znaky"
     },
     "client.validation.email.format": {
         "es": "El formato del correo electrónico no es válido",
         "en": "Email format is not valid",
         "fr": "Le format de l'email n'est pas valide",
         "de": "E-Mail-Format ist ungültig",
-        "pt": "O formato do email não é válido"
+        "pt": "O formato do email não é válido",
+        "it": "Il formato dell'email non è valido",
+        "nl": "E-mailformaat is niet geldig",
+        "pl": "Format e-mail jest nieprawidłowy",
+        "ru": "Недействительный формат электронной почты",
+        "tr": "E-posta formatı geçerli değil",
+        "cz": "Formát e-mailu není platný"
     },
     "client.validation.telefono.format": {
         "es": "El teléfono debe tener 9 dígitos",
         "en": "Phone number must be 9 digits",
         "fr": "Le numéro de téléphone doit comporter 9 chiffres",
         "de": "Die Telefonnummer muss 9 Ziffern haben",
-        "pt": "O número de telefone deve ter 9 dígitos"
+        "pt": "O número de telefone deve ter 9 dígitos",
+        "it": "Il numero di telefono deve essere di 9 cifre",
+        "nl": "Telefoonnummer moet 9 cijfers bevatten",
+        "pl": "Numer telefonu musi mieć 9 cyfr",
+        "ru": "Номер телефона должен состоять из 9 цифр",
+        "tr": "Telefon numarası 9 rakamdan oluşmalıdır",
+        "cz": "Telefonní číslo musí mít 9 číslic"
     },
     "client.validation.dni.format": {
         "es": "El DNI debe tener 8 dígitos seguidos de una letra",
         "en": "DNI must have 8 digits followed by a letter",
         "fr": "Le DNI doit comporter 8 chiffres suivis d'une lettre",
         "de": "DNI muss 8 Ziffern gefolgt von einem Buchstaben haben",
-        "pt": "O DNI deve ter 8 dígitos seguidos de uma letra"
+        "pt": "O DNI deve ter 8 dígitos seguidos de uma letra",
+        "it": "Il DNI deve avere 8 cifre seguite da una lettera",
+        "nl": "DNI moet 8 cijfers hebben gevolgd door een letter",
+        "pl": "DNI musi mieć 8 cyfr, po których następuje litera",
+        "ru": "DNI должен состоять из 8 цифр, за которыми следует буква",
+        "tr": "DNI, 8 rakam ve ardından bir harf içermelidir",
+        "cz": "DNI musí mít 8 číslic následovaných písmenem"
     },
     "client.validation.dni.letter": {
         "es": "La letra del DNI no es válida para el número proporcionado",
         "en": "The DNI letter is not valid for the given number",
         "fr": "La lettre du DNI n'est pas valide pour le numéro fourni",
         "de": "Der DNI-Buchstabe ist für die angegebene Nummer nicht gültig",
-        "pt": "A letra do DNI não é válida para o número fornecido"
+        "pt": "A letra do DNI não é válida para o número fornecido",
+        "it": "La lettera del DNI non è valida per il numero fornito",
+        "nl": "De DNI-letter is niet geldig voor het opgegeven nummer",
+        "pl": "Litera DNI nie jest prawidłowa dla podanego numeru",
+        "ru": "Буква DNI недействительна для указанного номера",
+        "tr": "DNI harfi, verilen numara için geçerli değil",
+        "cz": "Písmeno DNI není platné pro dané číslo"
     },
     "vehicle.validation.errors": {
         "es": "Por favor, corrija los errores en el formulario",
         "en": "Please correct the errors in the form",
         "fr": "Veuillez corriger les erreurs dans le formulaire",
         "de": "Bitte korrigieren Sie die Fehler im Formular",
-        "pt": "Por favor, corrija os erros no formulário"
+        "pt": "Por favor, corrija os erros no formulário",
+        "it": "Si prega di correggere gli errori nel modulo",
+        "nl": "Corrigeer de fouten in het formulier",
+        "pl": "Proszę poprawić błędy w formularzu",
+        "ru": "Пожалуйста, исправьте ошибки в форме",
+        "tr": "Lütfen formdaki hataları düzeltin",
+        "cz": "Opravte prosím chyby ve formuláři"
     },
     "vehicle.validation.kilometraje.positive": {
         "es": "El kilometraje no puede ser negativo",
         "en": "Mileage cannot be negative",
         "fr": "Le kilométrage ne peut pas être négatif",
         "de": "Die Kilometerleistung kann nicht negativ sein",
-        "pt": "A quilometragem não pode ser negativa"
+        "pt": "A quilometragem não pode ser negativa",
+        "it": "Il chilometraggio non può essere negativo",
+        "nl": "Kilometerstand kan niet negatief zijn",
+        "pl": "Przebieg nie może być ujemny",
+        "ru": "Пробег не может быть отрицательным",
+        "tr": "Kilometre negatif olamaz",
+        "cz": "Počet kilometrů nemůže být záporný"
     },
     "vehicle.validation.anio.range": {
         "es": "El año debe estar entre 1900 y 2025. No puedes tener coches desde antes de que se inventaran y no puedes registrar coches futuros",
         "en": "Year must be between 1900 and 2025. You cannot have cars from before invention and cannot register future cars",
         "fr": "L'année doit être comprise entre 1900 et 2025. Vous ne pouvez pas avoir de voitures depuis l'invention et vous ne pouvez pas enregistrer des voitures futures",
         "de": "Das Jahr muss zwischen 1900 und 2025 liegen. Sie können keine Autos von der Erfindung bis zur Zukunft haben und keine Zukunftskars registrieren",
-        "pt": "O ano deve ser entre 1900 e 2025. Você não pode ter carros de antes de serem inventados e você não pode registrar carros futuros"
+        "pt": "O ano deve ser entre 1900 e 2025. Você não pode ter carros de antes de serem inventados e você não pode registrar carros futuros",
+        "it": "L'anno deve essere compreso tra il 1900 e il 2025. Non puoi avere auto da prima dell'invenzione e non puoi registrare auto future",
+        "nl": "Jaar moet tussen 1900 en 2025 liggen. Je kunt geen auto's hebben van voor de uitvinding en geen toekomstige auto's registreren",
+        "pl": "Rok musi być między 1900 a 2025. Nie możesz mieć samochodów sprzed wynalezienia i nie możesz rejestrować przyszłych samochodów",
+        "ru": "Год должен быть между 1900 и 2025. Нельзя иметь автомобили до изобретения и регистрировать будущие автомобили",
+        "tr": "Yıl 1900 ile 2025 arasında olmalıdır. İcat edilmeden önceki arabalara sahip olamazsınız ve gelecekteki arabaları kaydedemezsiniz",
+        "cz": "Rok musí být mezi 1900 a 2025. Nemůžete mít auta před vynálezem a nemůžete registrovat budoucí auta"
     }
 }

@@ -1,4 +1,5 @@
 import { customSwalClasses, swalPos } from '@/Libs/SwalConfig';
+import { languages } from '@/Libs/translations';
 import { useTranslation } from '@/Providers/TranslationProvider';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
@@ -7,22 +8,9 @@ interface LanguageSwitcherProps {
     className?: string;
 }
 
-interface LanguageOption {
-    value: string;
-    label: string;
-}
-
 export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
     const { currentLanguage, changeLanguage } = useTranslation();
     const [isChanging, setIsChanging] = useState(false);
-
-    const languages: LanguageOption[] = [
-        { value: 'en', label: '🇺🇸 EN' },
-        { value: 'es', label: '🇪🇸 ES' },
-        { value: 'fr', label: '🇫🇷 FR' },
-        { value: 'de', label: '🇩🇪 DE' },
-        { value: 'pt', label: '🇵🇹 PT' },
-    ];
 
     const switchLanguage = (option: string) => {
         if (!option) return; // Skip if value is undefined

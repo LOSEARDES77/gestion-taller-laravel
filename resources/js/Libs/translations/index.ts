@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { LanguageOption } from '../../types';
 
 // Type definitions
 interface Translations {
@@ -6,9 +7,21 @@ interface Translations {
         [language: string]: string;
     };
 }
-
+export const languages: LanguageOption[] = [
+    { value: 'en', label: '🇺🇸 EN' },
+    { value: 'es', label: '🇪🇸 ES' },
+    { value: 'fr', label: '🇫🇷 FR' },
+    { value: 'de', label: '🇩🇪 DE' },
+    { value: 'pt', label: '🇵🇹 PT' },
+    { value: 'it', label: '🇮🇹 IT' },
+    { value: 'nl', label: '🇳🇱 NL' },
+    { value: 'pl', label: '🇵🇱 PL' },
+    { value: 'ru', label: '🇷🇺 RU' },
+    { value: 'tr', label: '🇹🇷 TR' },
+    { value: 'cz', label: '🇨🇿 CZ' },
+];
 // Supported languages
-export const supportedLanguages = ['en', 'es', 'fr', 'de', 'pt'];
+export const supportedLanguages = languages.map((lang) => lang.value);
 
 // Store translations once loaded
 let translations: Translations = {};
@@ -145,4 +158,5 @@ export default {
     isTranslationsInitialized,
     onLanguageChange,
     offLanguageChange,
+    languages,
 };

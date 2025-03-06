@@ -36,3 +36,8 @@ export interface Vehiculo {
     created_at?: string;
     updated_at?: string;
 }
+
+export interface LanguageOption {
+    value: string;
+    label: string;
+}
