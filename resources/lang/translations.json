@@ -249,39 +249,39 @@
     },
     "logout": {
         "es": "Cerrar sesión",
-        "en": "Logout",
+        "en": "Log out",
         "fr": "Déconnexion",
         "de": "Abmelden",
         "pt": "Sair",
         "it": "Disconnettersi",
         "nl": "Uitloggen",
-        "pl": "Wyloguj",
+        "pl": "Wyloguj się",
         "ru": "Выход",
-        "tr": "Çıkış",
+        "tr": "Çıkış yap",
         "cz": "Odhlásit se"
     },
     "login": {
         "es": "Iniciar sesión",
-        "en": "Login",
+        "en": "Log in",
         "fr": "Connexion",
         "de": "Anmelden",
         "pt": "Entrar",
-        "it": "Accesso",
+        "it": "Accedi",
         "nl": "Inloggen",
-        "pl": "Zaloguj",
-        "ru": "Вход",
-        "tr": "Giriş",
-        "cz": "Přihlášení"
+        "pl": "Zaloguj się",
+        "ru": "Войти",
+        "tr": "Giriş yap",
+        "cz": "Přihlásit se"
     },
     "register": {
         "es": "Registrarse",
         "en": "Register",
         "fr": "S'inscrire",
         "de": "Registrieren",
-        "pt": "Registrar",
+        "pt": "Registrar-se",
         "it": "Registrarsi",
         "nl": "Registreren",
-        "pl": "Zarejestruj",
+        "pl": "Zarejestruj się",
         "ru": "Регистрация",
         "tr": "Kayıt ol",
         "cz": "Registrovat"
@@ -1117,5 +1117,59 @@
         "ru": "Год должен быть между 1900 и 2025. Нельзя иметь автомобили до изобретения и регистрировать будущие автомобили",
         "tr": "Yıl 1900 ile 2025 arasında olmalıdır. İcat edilmeden önceki arabalara sahip olamazsınız ve gelecekteki arabaları kaydedemezsiniz",
         "cz": "Rok musí být mezi 1900 a 2025. Nemůžete mít auta před vynálezem a nemůžete registrovat budoucí auta"
+    },
+
+    "remember_me": {
+        "es": "Recordarme",
+        "en": "Remember me",
+        "fr": "Se souvenir de moi",
+        "de": "Angemeldet bleiben",
+        "pt": "Lembrar de mim",
+        "it": "Ricordami",
+        "nl": "Onthoud mij",
+        "pl": "Zapamiętaj mnie",
+        "ru": "Запомнить меня",
+        "tr": "Beni hatırla",
+        "cz": "Zapamatuj si mě"
+    },
+    "forgot_password": {
+        "es": "¿Olvidaste tu contraseña?",
+        "en": "Forgot your password?",
+        "fr": "Mot de passe oublié?",
+        "de": "Passwort vergessen?",
+        "pt": "Esqueceu sua senha?",
+        "it": "Hai dimenticato la password?",
+        "nl": "Wachtwoord vergeten?",
+        "pl": "Zapomniałeś hasła?",
+        "ru": "Забыли пароль?",
+        "tr": "Şifrenizi mi unuttunuz?",
+        "cz": "Zapomněli jste heslo?"
+    },
+
+    "confirm_password": {
+        "es": "Confirmar contraseña",
+        "en": "Confirm Password",
+        "fr": "Confirmer le mot de passe",
+        "de": "Passwort bestätigen",
+        "pt": "Confirmar senha",
+        "it": "Conferma password",
+        "nl": "Bevestig wachtwoord",
+        "pl": "Potwierdź hasło",
+        "ru": "Подтвердите пароль",
+        "tr": "Şifreyi onayla",
+        "cz": "Potvrdit heslo"
+    },
+    "already_registered": {
+        "es": "¿Ya estás registrado?",
+        "en": "Already registered?",
+        "fr": "Déjà inscrit?",
+        "de": "Bereits registriert?",
+        "pt": "Já está registrado?",
+        "it": "Già registrato?",
+        "nl": "Al geregistreerd?",
+        "pl": "Już zarejestrowany?",
+        "ru": "Уже зарегистрированы?",
+        "tr": "Zaten kayıtlı mısınız?",
+        "cz": "Již registrován?"
     }
 }
