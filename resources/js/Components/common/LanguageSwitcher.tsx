@@ -1,6 +1,5 @@
 import { customSwalClasses, swalPos } from '@/Libs/SwalConfig';
-import { languages } from '@/Libs/translations';
-import { useTranslation } from '@/Providers/TranslationProvider';
+import { getLanguage, languages, setLanguage } from '@/Libs/translations';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
 
@@ -9,16 +8,16 @@ interface LanguageSwitcherProps {
 }
 
 export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
-    const { currentLanguage, changeLanguage } = useTranslation();
+    const [currentLanguage, setCurrentLanguage] = useState(getLanguage());
     const [isChanging, setIsChanging] = useState(false);
 
-    const switchLanguage = (option: string) => {
-        if (!option) return; // Skip if value is undefined
+    const switchLanguage = async (lang: string) => {
+        if (!lang) return;
 
         try {
             setIsChanging(true);
-            changeLanguage(option);
-            localStorage.setItem('language', option);
+            setLanguage(lang);
+            setCurrentLanguage(lang);
         } catch (error) {
             Swal.fire({
                 title: 'Error',
@@ -31,7 +30,6 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
                 timerProgressBar: true,
                 customClass: customSwalClasses,
             });
-            console.error('LanguageSwitcher: Error changing language:', error);
         } finally {
             setIsChanging(false);
         }
@@ -42,7 +40,9 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
             <select
                 disabled={isChanging}
                 value={currentLanguage}
-                className={`block w-full rounded-md bg-gray-100 shadow-sm dark:bg-gray-700 dark:text-gray-300 sm:text-sm ${isChanging ? 'cursor-not-allowed opacity-50' : ''}`}
+                className={`block w-full rounded-md bg-gray-100 shadow-sm dark:bg-gray-700 dark:text-gray-300 sm:text-sm ${
+                    isChanging ? 'cursor-not-allowed opacity-50' : ''
+                }`}
                 onChange={(e) => switchLanguage(e.target.value)}
             >
                 {languages.map((lang) => (

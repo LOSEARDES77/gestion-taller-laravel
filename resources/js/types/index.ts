@@ -8,10 +8,12 @@ export interface User {
 export type PageProps<
     T extends Record<string, unknown> = Record<string, unknown>,
 > = T & {
-    auth: {
-        user: User;
-    };
+    auth: Auth;
 };
+
+export interface Auth {
+    user: User;
+}
 export interface Cliente {
     id: number;
     nombre: string;
@@ -40,4 +42,10 @@ export interface Vehiculo {
 export interface LanguageOption {
     value: string;
     label: string;
+}
+
+export interface Translations {
+    [key: string]: {
+        [language: string]: string;
+    };
 }

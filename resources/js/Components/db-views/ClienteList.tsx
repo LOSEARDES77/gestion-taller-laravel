@@ -22,9 +22,7 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
     useTranslation();
     const [editingId, setEditingId] = useState<number | null>(null);
     const [showForm, setShowForm] = useState(false);
-    const [clientErrors, setClientErrors] = useState<Record<string, string>>(
-        {},
-    );
+    const [, setClientErrors] = useState<Record<string, string>>({});
     const {
         data,
         setData,
@@ -131,7 +129,7 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                         customClass: customSwalClasses,
                     });
                 },
-                onError: (errors) => {
+                onError: () => {
                     // Server validation errors will be automatically set to the errors object
                     // Display a general error message
                     Swal.fire({
@@ -163,7 +161,7 @@ const ClienteList: React.FC<ClienteListProps> = ({ clientes }) => {
                         customClass: customSwalClasses,
                     });
                 },
-                onError: (errors) => {
+                onError: () => {
                     // Server validation errors will be automatically set to the errors object
                     // Display a general error message
                     Swal.fire({
